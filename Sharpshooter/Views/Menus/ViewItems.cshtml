@@ -1,0 +1,40 @@
+﻿@model Sharpshooter.Models.MenuItem
+
+@{
+    ViewBag.Title = "Item - " + Model.MenuItemTitle;
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>@Model.MenuItemTitle</h2>
+
+<p>
+    <img src="@Url.Content(Model.MenuItemImg)" width="255" height="195" />
+</p>
+
+<div>
+    <p>
+        <em>Category: </em> @Model.MenuGroup.MenuGroupTitle
+    </p>
+
+    <p>
+        <em>Description:</em> @Model.MenuItemDescription
+    </p>
+    <p>
+        <em>Ingredients: </em> @Model.MenuItemIngredients
+    </p>
+    <p>
+        <em>Price: </em> @String.Format("{0:F}", Model.MenuItemCost)
+    </p>
+
+    <p>
+        @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.MenuItemID }, "")
+    </p>
+</div>
+<p>
+    @Html.ActionLink("Back to Full Menu", "ViewMenuAll")
+</p>
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

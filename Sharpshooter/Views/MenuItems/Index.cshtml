@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Sharpshooter.Models.MenuItem>
+
+@{
+    ViewBag.Title = "Admin Menu Items";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Admin Menu Items</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu.MenuTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuGroup.MenuGroupTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemNutrition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemIngredients)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemImg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemCost)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu.MenuTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuGroup.MenuGroupTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemNutrition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemIngredients)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemCost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MenuItemID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MenuItemID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MenuItemID }) |
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

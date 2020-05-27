@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Sharpshooter.Models.MenuItem>
+
+@{
+    ViewBag.Title = "Menu Items";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Menu Items</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu.MenuTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuGroup.MenuGroupTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemNutrition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemIngredients)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItemCost)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu.MenuTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuGroup.MenuGroupTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemNutrition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemIngredients)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItemCost)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Sharpshooter.Models.MenuGroup>
+
+@{
+    ViewBag.Title = "Menu Groups";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Menu Groups</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu.MenuTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuGroupTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuGroupDescription)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu.MenuTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuGroupTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuGroupDescription)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

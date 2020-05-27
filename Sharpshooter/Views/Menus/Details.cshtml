@@ -1,0 +1,42 @@
+﻿@model Sharpshooter.Models.Menu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Menu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MenuID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

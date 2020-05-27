@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Sharpshooter.Models.Menu>
+
+@{
+    ViewBag.Title = "ViewMenu";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Browse Category</h2>
+<p>
+    Select from @Model.Count()
+    genres:
+</p>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })</li>
+    }
+</ul>
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />

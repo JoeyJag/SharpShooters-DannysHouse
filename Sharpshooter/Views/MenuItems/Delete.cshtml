@@ -1,0 +1,115 @@
+﻿@model Sharpshooter.Models.MenuItem
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MenuItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Menu.MenuTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menu.MenuTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuGroup.MenuGroupTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuGroup.MenuGroupTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemNutrition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemNutrition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemIngredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemIngredients)
+        </dd>
+
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemImg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemImg)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageFile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageFile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuItemCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuItemCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Sharpshooter.Models.MenuGroup>
+
+@{
+    ViewBag.Title = "Admin Menu Groups";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Admin Menu Groups</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu.MenuTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuGroupTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuGroupDescription)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu.MenuTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuGroupTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuGroupDescription)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MenuGroupID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MenuGroupID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MenuGroupID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br /><br />
+
+<p>
+    <li>&bull;@Html.ActionLink(" Menu Items", "Index", "MenuItems")</li>
+</p>
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
