@@ -556,10 +556,9 @@ C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\bin\Microsoft.Owin.Secu
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialCreate.resources
+C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.csproj.CoreCompileInputs.cache
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.pdb
-C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
-C:\Users\Joey Jag\Desktop\SharpShooters-New\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
