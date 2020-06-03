@@ -16,6 +16,9 @@
             @Html.DisplayNameFor(model => model.MenuTitle)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.MenuImg)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.MenuDescription)
         </th>
         <th></th>
@@ -23,21 +26,24 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MenuTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MenuDescription)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MenuID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MenuID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MenuID }) |
-                @*@Html.ActionLink("View Menu", "ViewMenu", new { id = item.MenuID })*@
-                @Html.ActionLink("View Menu", "ViewMenuAll", "Menus")
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuImg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MenuID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MenuID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MenuID }) |
+            @*@Html.ActionLink("View Menu", "ViewMenu", new { id = item.MenuID })*@
+            @Html.ActionLink("View Menu", "ViewMenuAll", "Menus")
+        </td>
+    </tr>
     }
 
 </table>

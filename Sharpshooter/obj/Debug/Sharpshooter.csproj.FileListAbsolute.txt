@@ -631,6 +631,7 @@ F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharp
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.Web.Infrastructure.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\Newtonsoft.Json.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\Owin.dll
+F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Net.Http.Formatting.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Helpers.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Http.dll
@@ -642,6 +643,8 @@ F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharp
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.WebPages.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.WebPages.Razor.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\WebGrease.dll
+F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.pdb
+F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.xml
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Helpers.xml
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Mvc.xml
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Optimization.xml
@@ -677,6 +680,3 @@ F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharp
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
 F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
-F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.dll
-F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.pdb
-F:\DUT\3rd year\AppDev 3A\NewFinal Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.xml

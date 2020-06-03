@@ -10,12 +10,18 @@
     Select from @Model.Count()
     genres:
 </p>
-<ul>
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
     @foreach (var category in Model)
     {
-    <li>&bull; &nbsp;@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })</li>
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="shop-cat-box">
+                <img class="img-fluid" src="@category.MenuImg" alt="" />
+                <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })"@category.MenuTitle</li>
+            </div>
+        </div>
     }
-</ul>
+</div>
 
 <br /><br /><br /><br />
 <br /><br /><br /><br />

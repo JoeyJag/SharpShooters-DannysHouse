@@ -19,6 +19,9 @@ namespace Sharpshooter.Models
         [Display(Name ="Description")]
         public string MenuDescription { get; set; }
 
+        [Display(Name ="Menu Image")]
+        public string MenuImg { get; set; }
+
         public virtual List<MenuItem> MenuItems { get; set; }
 
         public virtual List<MenuGroup> MenuGroups { get; set; }
