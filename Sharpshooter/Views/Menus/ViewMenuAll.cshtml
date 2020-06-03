@@ -1,8 +1,10 @@
 ﻿@model IEnumerable<Sharpshooter.Models.Menu>
 
 @{
-    ViewBag.Title = "ViewMenuAll";
-    Layout = "~/Views/Shared/TempLayout.cshtml";
+                /**/
+
+                ViewBag.Title = "ViewMenuAll";
+                Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
 <h2>Browse Category</h2>
@@ -10,19 +12,25 @@
     Select from @Model.Count()
     genres:
 </p>
-<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-    @foreach (var category in Model)
-    {
 
+
+
+
+@foreach (var category in Model)
+{
+    <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="shop-cat-box">
-                <img class="img-fluid" src="@category.MenuImg" alt="" />
+                <img class="img-fluid" src="@category.MenuImg" alt="" width="100" height="50" />
                 <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })"@category.MenuTitle</li>
             </div>
         </div>
-    }
-</div>
+    </div>
+ }
 
-<br /><br /><br /><br />
-<br /><br /><br /><br />
-<br /><br /><br /><br />
+    
+
+
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
