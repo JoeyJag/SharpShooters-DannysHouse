@@ -4,13 +4,42 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>Admin Panel:</h2>
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>ADMIN PANEL</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">ADMIN PANEL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
 
-<p>
-    <li>&bull;@Html.ActionLink(" Menu", "Index", "Menus")</li>
-    <li>&bull;@Html.ActionLink(" Menu Groups", "Index", "MenuGroups")</li>
-    <li>&bull;@Html.ActionLink(" Menu Items", "Index", "MenuItems")</li>
-</p>
+
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">Admin Panel</h2>
+                <p>
+                    <li>&bull;@Html.ActionLink(" Menu", "Index", "Menus")</li>
+                    <li>&bull;@Html.ActionLink(" Menu Groups", "Index", "MenuGroups")</li>
+                    <li>&bull;@Html.ActionLink(" Menu Items", "Index", "MenuItems")</li>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
 
 
 <br /><br /><br />

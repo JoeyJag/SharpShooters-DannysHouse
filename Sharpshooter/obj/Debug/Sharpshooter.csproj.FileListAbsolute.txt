@@ -789,6 +789,7 @@ C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.O
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialCreate.resources
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache

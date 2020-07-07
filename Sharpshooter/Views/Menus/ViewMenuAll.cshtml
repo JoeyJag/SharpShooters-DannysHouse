@@ -1,17 +1,46 @@
 ﻿@model IEnumerable<Sharpshooter.Models.Menu>
 
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "ViewMenuAll";
-                Layout = "~/Views/Shared/TempLayout.cshtml";
+    ViewBag.Title = "ViewMenuAll";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>Browse Category</h2>
-<p>
-    Select from @Model.Count()
-    genres:
-</p>
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>MENU</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">MENU</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">Browse Category</h2>
+                <h4>
+                    Select from @Model.Count()
+                    genres:
+                </h4>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -26,11 +55,11 @@
             </div>
         </div>
     </div>
- }
-
-    
+}
 
 
-    <br /><br /><br /><br />
-    <br /><br /><br /><br />
-    <br /><br /><br /><br />
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
