@@ -84,23 +84,27 @@
         <td></td>
     </tr>
 </table>
+<p>
+    @Html.ActionLink("Print Receipt", "GeneratePDF")
+</p>
 
-@using (Html.BeginForm("AddressAndPayment", "Checkout"))
-{
-    <button type="submit">Checkout</button>
-}
+<p>
+    @using (Html.BeginForm("AddressAndPayment", "Checkout"))
+    {
+        <button type="submit">Checkout</button>
+    }
 
-@*<p class="button">
-        @Html.ActionLink("Checkout>> ", "AddressAndPayment", "Checkout")
-    </p>*@
+    @*<p class="button">
+            @Html.ActionLink("Checkout>> ", "AddressAndPayment", "Checkout")
+        </p>*@
 
-<br /><br />
+    <br /><br />
 
-@Html.ActionLink("Want To Continue Shopping?", "ViewMenuAll", "Menus")
-
-
+    @Html.ActionLink("Want To Continue Shopping?", "ViewMenuAll", "Menus")
 
 
-<br /><br /><br /><br />
-<br /><br /><br /><br />
-<br /><br /><br /><br />
+
+
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />

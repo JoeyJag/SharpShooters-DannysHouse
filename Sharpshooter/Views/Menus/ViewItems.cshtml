@@ -7,29 +7,30 @@
 
 <h2>@Model.MenuItemTitle</h2>
 
-<p>
-    <img src="@Url.Content(Model.MenuItemImg)" width="255" height="195" />
-</p>
-
-<div>
     <p>
-        <em>Category: </em> @Model.MenuGroup.MenuGroupTitle
+        <img src="@Url.Content(Model.MenuItemImg)" width="255" height="195" />
     </p>
 
-    <p>
-        <em>Description:</em> @Model.MenuItemDescription
-    </p>
-    <p>
-        <em>Ingredients: </em> @Model.MenuItemIngredients
-    </p>
-    <p>
-        <em>Price: </em> @String.Format("{0:F}", Model.MenuItemCost)
-    </p>
+    <div>
+        <p>
+            <em>Category: </em> @Model.MenuGroup.MenuGroupTitle
+        </p>
 
-    <p>
-        @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.MenuItemID }, "")
-    </p>
-</div>
+        <p>
+            <em>Description:</em> @Model.MenuItemDescription
+        </p>
+        <p>
+            <em>Ingredients: </em> @Model.MenuItemIngredients
+        </p>
+        <p>
+            <em>Price: </em> @String.Format("{0:F}", Model.MenuItemCost)
+        </p>
+
+        <p>
+            @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.MenuItemID }, "")
+        </p>
+    </div>
+
 <p>
     @Html.ActionLink("Back to Full Menu", "ViewMenuAll")
 </p>
