@@ -4,17 +4,29 @@
     ViewBag.Title = "Browse";
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
-
-<div> <h3><em>@Model.MenuTitle</em> Menu</h3></div>
-
-<ul>
-    @foreach (var item in Model.MenuItems)
-    {
-    <li>
-        &bull; &nbsp; @Html.ActionLink(item.MenuItemTitle, "ViewItems", new { id = item.MenuItemID })
-    </li>
+<style>
+    div {
+        text-align: center;
+        align-content: center;
     }
-</ul>
+
+    img{
+        border-radius: 10px;
+    }
+</style>
+<div> <h3 style="margin:auto"><em>@Model.MenuTitle</em> Menu</h3></div>
+<div>
+    <ul style="margin:auto">
+        @foreach (var item in Model.MenuItems)
+        {
+                <li>
+                    <p><img src="@Url.Content(item.MenuItemImg)" alt="" width="400" height="300" /></p>
+                    <p>&bull; &nbsp; @Html.ActionLink(item.MenuItemTitle, "ViewItems", new { id = item.MenuItemID })</p>
+                </li>
+            
+        }
+    </ul>
+</div>
 
 
 
