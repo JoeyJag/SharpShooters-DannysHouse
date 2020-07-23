@@ -5,13 +5,27 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>@Model.MenuItemTitle</h2>
+<style>
+    p{
+       align-content:center;
+       text-align:center
+    }
+    div{
+        margin-left:auto;
 
-    <p style="align-content:center">
-        <img src="@Url.Content(Model.MenuItemImg)" width="255" height="195" />
+    }
+    img{
+        border-radius: 10px;
+    }
+</style>
+<h1 style="text-align:center">@Model.MenuItemTitle</h1>
+
+
+    <p style="margin:auto">
+        <img src="@Url.Content(Model.MenuItemImg)" width="400" height="300" />
     </p>
 
-    <div style="align-content:center">
+    <div style="margin:auto">
         <p>
             <em>Category: </em> @Model.MenuGroup.MenuGroupTitle
         </p>
