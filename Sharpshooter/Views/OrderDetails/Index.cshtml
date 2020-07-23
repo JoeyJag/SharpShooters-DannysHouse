@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Sharpshooter.Models.OrderDetail>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Update Order";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -33,32 +33,31 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Order.OrderId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Order.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quantity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UnitPrice)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OrderStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.OrderDetailId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.OrderDetailId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.OrderDetailId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order.OrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderStatus)
+            </td>
+            <td>
+                @Html.ActionLink("Update", "Edit", new { id = item.OrderDetailId }) |
+            </td>
+        </tr>
+    }
 
 </table>

@@ -13,12 +13,14 @@ namespace Sharpshooter.Controllers
     public class OrderDetailsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
         // GET: OrderDetails
         public ActionResult Index()
-        {
+        {  // View(db.GameDetails.Where(x => x.Genre == search || search == null).ToList());
+         
             var orderDetails = db.OrderDetails.Include(o => o.MenuItem).Include(o => o.Order);
-            return View(orderDetails.ToList());
+
+            return View(orderDetails.Where(x => x.OrderStatus == false).ToList());
         }
 
         // GET: OrderDetails/Details/5
