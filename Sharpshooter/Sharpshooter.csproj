@@ -249,6 +249,7 @@
     <Compile Include="Controllers\MenuGroupsController.cs" />
     <Compile Include="Controllers\MenuItemsController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
+    <Compile Include="Controllers\OrderDetailsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,9 +258,9 @@
     <Compile Include="Migrations\202005061454489_InitialCreate.Designer.cs">
       <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007221854242_InitialModel.cs" />
-    <Compile Include="Migrations\202007221854242_InitialModel.Designer.cs">
-      <DependentUpon>202007221854242_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202007231028046_InitialModel.cs" />
+    <Compile Include="Migrations\202007231028046_InitialModel.Designer.cs">
+      <DependentUpon>202007231028046_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -470,6 +471,11 @@
     <Content Include="Views\ShoppingCart\CartSummary.cshtml" />
     <Content Include="Views\Checkout\DetailsCustomer.cshtml" />
     <Content Include="Views\Checkout\DetailsOrder.cshtml" />
+    <Content Include="Views\OrderDetails\Create.cshtml" />
+    <Content Include="Views\OrderDetails\Delete.cshtml" />
+    <Content Include="Views\OrderDetails\Details.cshtml" />
+    <Content Include="Views\OrderDetails\Edit.cshtml" />
+    <Content Include="Views\OrderDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -493,8 +499,8 @@
     <EmbeddedResource Include="Migrations\202005061454489_InitialCreate.resx">
       <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007221854242_InitialModel.resx">
-      <DependentUpon>202007221854242_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007231028046_InitialModel.resx">
+      <DependentUpon>202007231028046_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
