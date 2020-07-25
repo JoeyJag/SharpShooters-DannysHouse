@@ -10,7 +10,7 @@
     Select from @Model.Count()
     genres:
 </p>
-<ul>
+<ul style="margin-left:45px">
     @foreach (var category in Model)
     {
         <li>@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })</li>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Rotativa;
 using Sharpshooter.Models;
 using Sharpshooter.ViewModel;
 using PayPal.Api;
@@ -31,6 +32,16 @@ namespace Sharpshooter.Controllers
             return View(viewModel);
         }
 
+        public ActionResult ViewCart()
+        {
+            return PartialView("Index");
+        }
+
+        public ActionResult GeneratePDF()
+        {
+            var report = new Rotativa.ActionAsPdf("ViewCart");
+            return report;
+        }
         public ActionResult AddToCart(int id)
         {
             var addedItem = db.MenuItems
@@ -40,8 +51,12 @@ namespace Sharpshooter.Controllers
 
             cart.AddToCart(addedItem);
 
+
+
             return RedirectToAction("Index");
         }
+
+  
 
         [HttpPost]
         public ActionResult RemoveFromCart(int id)

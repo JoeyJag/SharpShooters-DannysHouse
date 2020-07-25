@@ -6,7 +6,12 @@
     ViewBag.Title = "ViewMenuAll";
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
-
+<style>
+    div {
+        text-align: center;
+        align-content: center;
+    }
+</style>
 <!-- Start All Title Box -->
 <div class="all-title-box">
     <div class="container">
@@ -47,7 +52,7 @@
 
 @foreach (var category in Model)
 {
-    <div class="row">
+    <div style="margin-left: 100px"   class="row">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="shop-cat-box">
                 <img class="img-fluid" src="@category.MenuImg" alt="" width="100" height="50" />

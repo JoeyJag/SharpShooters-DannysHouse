@@ -1,9 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Sharpshooter.Models;
+using Sharpshooter.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Sharpshooter.Models;
 
 namespace Sharpshooter.Controllers
 {
@@ -11,7 +16,7 @@ namespace Sharpshooter.Controllers
         public class CheckoutController : Controller
         {
             ApplicationDbContext db = new ApplicationDbContext();
-            const string PromoCode = "50";
+        const string PromoCode = "50";
 
             public ActionResult AddressAndPayment()
             {
@@ -48,8 +53,33 @@ namespace Sharpshooter.Controllers
                 }
             }
 
+        public ActionResult DetailsCustomer(int? id)
+        {
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                Order order = db.Orders.Find(id);
+                if (order == null)
+                {
+                    return HttpNotFound();
+                }
+                return PartialView(order);
+            
+        }
+
+        public ActionResult DetailsOrder(int? id)
+        {
+            OrderDetail orderDetail = new OrderDetail();
+            orderDetail = db.OrderDetails.Where(x => x.OrderId == id).FirstOrDefault();
+
+            return PartialView("DetailsOrder", db.OrderDetails.Where(x => x.OrderId == id).ToList());
+        }
+
             public ActionResult Complete(int id)
             {
+            Order order = new Order();
+            order = db.Orders.Where(x => x.OrderId == id).FirstOrDefault();
 
                 bool isValid = db.Orders.Any(
                     o => o.OrderId == id &&
@@ -64,5 +94,5 @@ namespace Sharpshooter.Controllers
                     return View("Error");
                 }
             }
-        }
+    }
     }

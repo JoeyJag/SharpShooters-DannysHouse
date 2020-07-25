@@ -20,6 +20,8 @@ namespace Sharpshooter.Models
         public int MenuGroupID { get; set; }
         public virtual MenuGroup MenuGroup { get; set; }
 
+        public virtual List<OrderDetail> OrderDetails { get; set; }
+
 
 
         [Required(ErrorMessage ="A title is required for the menu item")]

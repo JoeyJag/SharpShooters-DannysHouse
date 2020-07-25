@@ -756,7 +756,7 @@
 }
  .shop-cat-box{
      margin-bottom: 30px;
-     position: relative;
+     position: center;
      padding: 3px;
      overflow: hidden;
      border: 1px solid #010101;

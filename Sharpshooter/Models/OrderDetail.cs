@@ -12,6 +12,8 @@ namespace Sharpshooter.Models
         public int MenuItemID { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+
+        public bool OrderStatus { get; set; }
         public virtual MenuItem MenuItem { get; set; }
         public virtual Order Order { get; set; }
     }

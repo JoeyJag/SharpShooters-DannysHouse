@@ -5,36 +5,46 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2 class="noo-sh-title">@Model.MenuItemTitle</h2>
+<style>
+    p{
+       align-content:center;
+       text-align:center
+    }
+    div{
+        margin-left:auto;
 
-<p>
-    <img src="@Url.Content(Model.MenuItemImg)" width="255" height="195" />
-</p>
-<br />
+    }
+    img{
+        border-radius: 10px;
+    }
+</style>
+<h1 style="text-align:center">@Model.MenuItemTitle</h1>
 
-<div>
-    <p>
-        <em>Category: </em> @Model.MenuGroup.MenuGroupTitle
+
+    <p style="margin:auto">
+        <img src="@Url.Content(Model.MenuItemImg)" width="400" height="300" />
     </p>
 
-    <p>
-        <em>Description:</em> @Model.MenuItemDescription
-    </p>
-    <p>
-        <em>Ingredients: </em> @Model.MenuItemIngredients
-    </p>
-    <p>
-        <em>Price (R): </em> @String.Format("{0:F}", Model.MenuItemCost)
-    </p>
+    <div style="margin:auto">
+        <p>
+            <em>Category: </em> @Model.MenuGroup.MenuGroupTitle
+        </p>
 
-    <br />
-    <br />
+        <p>
+            <em>Description:</em> @Model.MenuItemDescription
+        </p>
+        <p>
+            <em>Ingredients: </em> @Model.MenuItemIngredients
+        </p>
+        <p>
+            <em>Price: </em> @String.Format("{0:F}", Model.MenuItemCost)
+        </p>
 
-    <p>
-        @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.MenuItemID }, "")
-    </p>
-</div>
-<br />
+        <p>
+            @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.MenuItemID }, "")
+        </p>
+    </div>
+
 <p>
     @Html.ActionLink("Back to Full Menu", "ViewMenuAll")
 </p>
