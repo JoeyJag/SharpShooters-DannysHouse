@@ -5,11 +5,12 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>@Model.MenuItemTitle</h2>
+<h2 class="noo-sh-title">@Model.MenuItemTitle</h2>
 
 <p>
     <img src="@Url.Content(Model.MenuItemImg)" width="255" height="195" />
 </p>
+<br />
 
 <div>
     <p>
@@ -23,13 +24,17 @@
         <em>Ingredients: </em> @Model.MenuItemIngredients
     </p>
     <p>
-        <em>Price: </em> @String.Format("{0:F}", Model.MenuItemCost)
+        <em>Price (R): </em> @String.Format("{0:F}", Model.MenuItemCost)
     </p>
+
+    <br />
+    <br />
 
     <p>
         @Html.ActionLink("Add To Cart", "AddToCart", "ShoppingCart", new { id = Model.MenuItemID }, "")
     </p>
 </div>
+<br />
 <p>
     @Html.ActionLink("Back to Full Menu", "ViewMenuAll")
 </p>

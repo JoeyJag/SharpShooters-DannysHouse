@@ -748,6 +748,7 @@ C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.O
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Newtonsoft.Json.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Owin.dll
+C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\PayPal.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Net.Http.Formatting.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Helpers.dll
@@ -760,6 +761,7 @@ C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.WebPages.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.WebPages.Razor.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\WebGrease.dll
+C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\PayPal.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.pdb
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\SendGrid.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Web.Helpers.xml
@@ -789,7 +791,6 @@ C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.O
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialCreate.resources
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Success</h2>
+
+<body>
+    <div class="feat-prod-box_details">
+        <div class="contact-form">
+            <div class="form-subtitle">Order Information</div>
+
+            <div class="form_row">
+                <label class="contact"><strong>Transaction Id: </strong></label>
+                @ViewBag.result.TransactionId
+            </div>
+
+            <div class="form-row">
+                <label class="contact"><strong>First Name: </strong></label>
+                @ViewBag.result.PayerFirstName
+            </div>
+
+            <div class="form-row">
+                <label class="contact"><strong>Last Name: </strong></label>
+                @ViewBag.result.PayerLastName
+            </div>
+
+            <div class="form-row">
+                <label class="contact"><strong>Email: </strong></label>
+                @ViewBag.result.PayerEmail
+            </div>
+
+            <div class="form-row">
+                <label class="contact"><strong>Gross Payment: </strong></label>
+                @ViewBag.result.GrossTotal
+            </div>
+
+            <div class="form-row">
+                <label class="contact"><strong>Payment Fee: </strong></label>
+                @ViewBag.result.PaymentFee
+            </div>
+
+        </div>
+
+    </div>
+
+    <br /><br />
+
+    <p>
+        How about shopping for some more Products in our
+        @Html.ActionLink("Home", "Index", "Home")
+    </p>
+
+</body>
+

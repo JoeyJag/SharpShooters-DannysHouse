@@ -7,12 +7,10 @@ namespace Sharpshooter.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Menus", "MenuImg", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Menus", "MenuImg");
         }
     }
 }
