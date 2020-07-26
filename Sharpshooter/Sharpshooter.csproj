@@ -481,6 +481,7 @@
     <Content Include="Views\PayPal\Index.cshtml" />
     <Content Include="Views\PayPal\Success.cshtml" />
     <Content Include="Views\PayPal\DetailsOrder.cshtml" />
+    <Content Include="Views\Checkout\PayAtStore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />

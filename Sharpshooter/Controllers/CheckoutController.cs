@@ -23,6 +23,8 @@ namespace Sharpshooter.Controllers
                 return View();
             }
 
+   
+
             [HttpPost]
             public ActionResult AddressAndPayment(FormCollection values)
             {
@@ -94,5 +96,11 @@ namespace Sharpshooter.Controllers
                     return View("Error");
                 }
             }
+
+        public ActionResult PayAtStore()
+        {
+            return View();
+        }
+
     }
     }
