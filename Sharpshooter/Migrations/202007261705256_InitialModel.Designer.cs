@@ -13,7 +13,7 @@ namespace Sharpshooter.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202007261530186_InitialModel"; }
+            get { return "202007261705256_InitialModel"; }
         }
         
         string IMigrationMetadata.Source

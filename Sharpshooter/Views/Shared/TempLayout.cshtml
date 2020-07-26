@@ -131,15 +131,34 @@
                         <li>@Html.ActionLink("Menu", "ViewMenuAll", "Menus")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                        @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>*@
                         <li>@Html.ActionLink("Success Screen", "Success", "PayPal")</li>
-                        <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
+                        @*<li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>*@
+
+
 
                         @*<li>@{Html.RenderAction("CartSummary", "ShoppingCart");}</li>*@
                         @*<li><a href="~/PayPal/Index">Payment</a></li>*@
                         @*<li>@Html.ActionLink("MenuItems", "ViewMenuItems", "MenuItems")</li>*@
 
-
+                        <li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
+                            </ul>
+                            }
+                        </li>
+                        <li>
+                            @if (User.IsInRole("Employee"))
+                            {
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                </ul>
+                            }
+                        </li>
+                        
 
 
 
