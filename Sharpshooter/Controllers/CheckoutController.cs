@@ -16,7 +16,7 @@ namespace Sharpshooter.Controllers
         public class CheckoutController : Controller
         {
             ApplicationDbContext db = new ApplicationDbContext();
-        const string PromoCode = "50";
+        
 
             public ActionResult AddressAndPayment()
             {

@@ -23,7 +23,7 @@ namespace Sharpshooter.PayPal
         public string ItemName { get; set; }
         public string Currency { get; set; }
         public string TransactionId { get; set; }
-        public string SubscriberId { get; set; } 
+        public string SubscriberId { get; set; }
         public string Custom { get; set; }
 
         private static string authToken, txToken, query, strResponse;

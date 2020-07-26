@@ -122,9 +122,10 @@
 
 
                     <input type="hidden" name="item_name_1" value="@item.MenuItem.MenuItemTitle" />
-                    <input type="hidden" name="item_number_1" value="p1" />
+                    <input type="hidden" name="item_number_1" value="@item.RecordId" />
                     <input type="hidden" name="amount_1" value="@item.MenuItem.MenuItemCost" />
                     <input type="hidden" name="quantity_1" value="@item.Count" />
+
 
                 </td>
             </tr>
@@ -156,7 +157,7 @@
 <br />
 
 
-<a href="@Url.Action("PaymentWithPaypal", "ShoppingCart")" class="btn btn-success">Pay at Store</a>
+<a href="@Url.Action("Complete", "Checkout")" class="btn btn-success">Pay at Store</a>
 
 @*@using (Html.BeginForm("Index", "PayPal"))
     {

@@ -29,7 +29,7 @@ namespace Sharpshooter.Controllers
         //        {
         //            return i;
         //        }
-                
+
         //    }
         //    return -1;
         //}
@@ -73,6 +73,14 @@ namespace Sharpshooter.Controllers
         {
             ViewBag.result = PDTHolder.Success(Request.QueryString.Get("tx"));
             return View("Success");
+        }
+
+        public ActionResult DetailsOrder(int? id)
+        {
+            OrderDetail orderDetail = new OrderDetail();
+            orderDetail = db.OrderDetails.Where(x => x.OrderId == id).FirstOrDefault();
+
+            return PartialView("DetailsOrder", db.OrderDetails.Where(x => x.OrderId == id).ToList());
         }
     }
 }

@@ -73,7 +73,7 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MenuID,MenuTitle,MenuDescription")] Menu menu)
+        public ActionResult Create([Bind(Include = "MenuID,MenuTitle,MenuDescription,MenuImg")] Menu menu)
         {
             if (ModelState.IsValid)
             {
@@ -105,7 +105,7 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MenuID,MenuTitle,MenuDescription")] Menu menu)
+        public ActionResult Edit([Bind(Include = "MenuID,MenuTitle,MenuDescription,MenuImg")] Menu menu)
         {
             if (ModelState.IsValid)
             {

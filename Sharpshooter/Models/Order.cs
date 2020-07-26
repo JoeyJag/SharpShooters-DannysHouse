@@ -31,21 +31,18 @@ namespace Sharpshooter.Models
         [StringLength(40)]
         public string City { get; set; }
         
-        public string State { get; set; }
+        
         [Required(ErrorMessage = "Postal Code is required")]
         [DisplayName("Postal Code")]
         [StringLength(10)]
         public string PostalCode { get; set; }
         
-        public string Country { get; set; }
+        
         [Required(ErrorMessage = "Phone is required")]
         [StringLength(24)]
         public string Phone { get; set; }
         
-        [DisplayName("Email Address")]
-
-        
-        [DataType(DataType.EmailAddress)]
+        [DisplayName("Nickname")]     
         public string Email { get; set; }
         [ScaffoldColumn(false)]
         public decimal Total { get; set; }
@@ -58,7 +55,7 @@ namespace Sharpshooter.Models
 
             bob.Append("<p>Order Information for Order: " + order.OrderId + "<br>Placed at: " + order.OrderDate + "</p>").AppendLine();
             bob.Append("<p>Name: " + order.FirstName + " " + order.LastName + "<br>");
-            bob.Append("Address: " + order.Address + " " + order.City + " " + order.State + " " + order.PostalCode + "<br>");
+            bob.Append("Address: " + order.Address + " " + order.City + " " + order.PostalCode + "<br>");
             bob.Append("Contact: " + order.Email + "     " + order.Phone + "</p>");
 
             bob.Append("<br>").AppendLine();
