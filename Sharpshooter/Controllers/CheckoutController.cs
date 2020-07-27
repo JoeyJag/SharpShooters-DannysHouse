@@ -16,12 +16,14 @@ namespace Sharpshooter.Controllers
         public class CheckoutController : Controller
         {
             ApplicationDbContext db = new ApplicationDbContext();
-        const string PromoCode = "50";
+        
 
             public ActionResult AddressAndPayment()
             {
                 return View();
             }
+
+   
 
             [HttpPost]
             public ActionResult AddressAndPayment(FormCollection values)
@@ -31,13 +33,7 @@ namespace Sharpshooter.Controllers
 
                 try
                 {
-                    if (string.Equals(values["PromoCode"], PromoCode,
-                        StringComparison.OrdinalIgnoreCase) == false)
-                    {
-                        return View(order);
-                    }
-                    else
-                    {
+                    
                         order.Username = User.Identity.Name;
                         order.OrderDate = DateTime.Now;
 
@@ -50,7 +46,7 @@ namespace Sharpshooter.Controllers
 
                         return RedirectToAction("Complete",
                             new { id = order.OrderId });
-                    }
+                    
                 }
                 catch
                 {
@@ -100,5 +96,11 @@ namespace Sharpshooter.Controllers
                     return View("Error");
                 }
             }
+
+        public ActionResult PayAtStore()
+        {
+            return View();
+        }
+
     }
     }

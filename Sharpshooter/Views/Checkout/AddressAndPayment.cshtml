@@ -13,10 +13,10 @@
 
     <h2>Address And Payment</h2>
     <fieldset>
-        <legend>Shipping Information</legend>
+        <legend>Delivery Information</legend>
         @Html.EditorForModel()
     </fieldset>
-    <fieldset>
+    @*<fieldset>
         <legend>Payment</legend>
         <p>
             We're running a promotion: all Products have 50% discount
@@ -28,7 +28,7 @@
         <div class="editor-field">
             @Html.TextBox("PromoCode")
         </div>
-    </fieldset>
+    </fieldset>*@
 
     <input type="submit" value="Submit Order" />
 }

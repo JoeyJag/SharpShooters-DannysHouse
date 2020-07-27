@@ -4,9 +4,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
+@using System.Configuration
 
 <script src="/Scripts/jquery-1.4.4.min.js"
-        type="text/javascript"></script>
+        type="text/javascript">
+</script>
+
 <script type="text/javascript">
     $(function () {
         // Document.ready -> link up remove event handler
@@ -36,75 +39,143 @@
     <em>Review your cart:</em>
 </h3>
 
-<div id="update-message">
-</div>
-<table class="table">
-    <tr>
-        <th>
-            Item Name
-        </th>
-        <th>
-            Price (each)
-        </th>
-        <th>
-            Quantity
-        </th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model.CartItems)
-    {
-        <tr id="row-@item.RecordId">
-            <td>
-                @Html.ActionLink(item.MenuItem.MenuItemTitle,
-"ViewMenu", "Menus", new { id = item.MenuItemID }, null)
-            </td>
-            <td>
-                @item.MenuItem.MenuItemCost
-            </td>
-            <td id="item-count-@item.RecordId">
-                @item.Count
-            </td>
-            <td>
-                <a href="#" class="RemoveLink"
-                   data-id="@item.RecordId">
-                    Remove
-                    from cart
-                </a>
-            </td>
+<form method="post" action="@ConfigurationManager.AppSettings["PayPalSubmitUrl"]">
+
+    <input type="hidden" name="upload" value="1" />
+    <input type="hidden" name="return" value="@ConfigurationManager.AppSettings["returnurl"]" />
+    <input type="hidden" name="cmd" value="_cart" />
+    <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["PayPalUsername"]" />
+
+    @*<!--Product 1-->
+        <input type="hidden" name="item_name_1" value="Product 1" />
+        <input type="hidden" name="item_number_1" value="p1" />
+        <input type="hidden" name="amount_1" value="2" />
+        <input type="hidden" name="quantity_1" value="3" />
+
+        <!--Product 2-->
+        <input type="hidden" name="item_name_2" value="Product 2" />
+        <input type="hidden" name="item_number_2" value="p2" />
+        <input type="hidden" name="amount_2" value="3" />
+        <input type="hidden" name="quantity_2" value="4" />
+
+        <!--Product 3-->
+        <input type="hidden" name="item_name_3" value="Product 3" />
+        <input type="hidden" name="item_number_3" value="p3" />
+        <input type="hidden" name="amount_3" value="3" />
+        <input type="hidden" name="quantity_3" value="2" />*@
+
+
+    @*<input type="hidden" name="item_name" value="Product 1" />
+    <input type="hidden" name="item_number" value="P1" />
+    <input type="hidden" name="amount" value="10" />
+    <input type="hidden" name="quantity" value="1" />*@
+
+
+
+    <div id="update-message">
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Price (R)
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th></th>
         </tr>
-    }
-    <tr>
-        <td>
-            <b>Total:</b>
-        </td>
-        <td id="cart-total">
-            @Model.CartTotal
-        </td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
-<p>
-    @Html.ActionLink("Print Receipt", "GeneratePDF")
-</p>
+        @foreach (var item in Model.CartItems)
+        {
 
-<p>
-    @using (Html.BeginForm("AddressAndPayment", "Checkout"))
+
+
+            <tr id="row-@item.RecordId">
+                <td>
+
+
+                    @Html.ActionLink(item.MenuItem.MenuItemTitle,
+    "ViewMenu", "Menus", new { id = item.MenuItemID }, null)
+                </td>
+                <td>
+
+
+                    @item.MenuItem.MenuItemCost
+                </td>
+                <td id="item-count-@item.RecordId">
+
+
+                    @item.Count
+                </td>
+                <td>
+                    @*@Html.ActionLink("Remove from cart", "RemoveFromCart", "ShoppingCart", new { id = item.MenuItemID },
+        new { onclick = "return confirm ('Are you sure you want to remove this?');", @class = "RemoveLink" })*@
+
+                    <a href="#" class="RemoveLink"
+                       data-id="@item.RecordId">
+                        Remove
+                        from cart
+
+                    </a>
+
+
+                    <input type="hidden" name="item_name_1" value="@item.MenuItem.MenuItemTitle" />
+                    <input type="hidden" name="item_number_1" value="@item.RecordId" />
+                    <input type="hidden" name="amount_1" value="@item.MenuItem.MenuItemCost" />
+                    <input type="hidden" name="quantity_1" value="@item.Count" />
+
+
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>
+                <b>Total:</b>
+            </td>
+            <td id="cart-total">
+                @Model.CartTotal
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <button class="btn-danger">Pay with PayPal</button>
+</form>
+
+
+<br />
+
+
+@using (Html.BeginForm("AddressAndPayment", "Checkout"))
+{
+    <button type="submit">Pay on Delivery</button>
+}
+
+<br />
+
+
+<a href="@Url.Action("PayAtStore", "Checkout")" class="btn btn-success">Pay at Store</a>
+
+@*@using (Html.BeginForm("Index", "PayPal"))
     {
-        <button type="submit">Checkout</button>
-    }
-
-    @*<p class="button">
-            @Html.ActionLink("Checkout>> ", "AddressAndPayment", "Checkout")
-        </p>*@
-
-    <br /><br />
-
-    @Html.ActionLink("Want To Continue Shopping?", "ViewMenuAll", "Menus")
+        <button type="submit">Pick Up</button>
+    }*@
 
 
+@*<p class="button">
+        @Html.ActionLink("Checkout>> ", "AddressAndPayment", "Checkout")
+    </p>*@
+
+<br /><br />
+
+@Html.ActionLink("Want To Continue Shopping?", "ViewMenuAll", "Menus")
+
+<br /><br />
 
 
-    <br /><br /><br /><br />
-    <br /><br /><br /><br />
-    <br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

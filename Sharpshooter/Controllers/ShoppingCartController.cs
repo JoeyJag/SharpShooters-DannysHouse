@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Rotativa;
@@ -13,6 +14,9 @@ namespace Sharpshooter.Controllers
     {
         // GET: ShoppingCart
         ApplicationDbContext db = new ApplicationDbContext();
+
+        private string strCart = "Cart";
+
         // GET: ShoppingCart
         public ActionResult Index()
         {
@@ -83,5 +87,9 @@ namespace Sharpshooter.Controllers
             ViewData["CartCount"] = cart.GetCount();
             return PartialView("CartSummary");
         }
+
+
+
+       
     }
 }

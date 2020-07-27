@@ -250,6 +250,7 @@
     <Compile Include="Controllers\MenuItemsController.cs" />
     <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\OrderDetailsController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -258,9 +259,9 @@
     <Compile Include="Migrations\202005061454489_InitialCreate.Designer.cs">
       <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007231028046_InitialModel.cs" />
-    <Compile Include="Migrations\202007231028046_InitialModel.Designer.cs">
-      <DependentUpon>202007231028046_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202007261705256_InitialModel.cs" />
+    <Compile Include="Migrations\202007261705256_InitialModel.Designer.cs">
+      <DependentUpon>202007261705256_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -273,6 +274,7 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="PayPal\PDTHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\ShoppingCartRemoveViewModel.cs" />
@@ -476,6 +478,10 @@
     <Content Include="Views\OrderDetails\Details.cshtml" />
     <Content Include="Views\OrderDetails\Edit.cshtml" />
     <Content Include="Views\OrderDetails\Index.cshtml" />
+    <Content Include="Views\PayPal\Index.cshtml" />
+    <Content Include="Views\PayPal\Success.cshtml" />
+    <Content Include="Views\PayPal\DetailsOrder.cshtml" />
+    <Content Include="Views\Checkout\PayAtStore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -499,8 +505,8 @@
     <EmbeddedResource Include="Migrations\202005061454489_InitialCreate.resx">
       <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007231028046_InitialModel.resx">
-      <DependentUpon>202007231028046_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007261705256_InitialModel.resx">
+      <DependentUpon>202007261705256_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
