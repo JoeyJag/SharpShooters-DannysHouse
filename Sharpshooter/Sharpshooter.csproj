@@ -259,9 +259,9 @@
     <Compile Include="Migrations\202005061454489_InitialCreate.Designer.cs">
       <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007261705256_InitialModel.cs" />
-    <Compile Include="Migrations\202007261705256_InitialModel.Designer.cs">
-      <DependentUpon>202007261705256_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202010121606000_InitialModel.cs" />
+    <Compile Include="Migrations\202010121606000_InitialModel.Designer.cs">
+      <DependentUpon>202010121606000_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -347,6 +347,67 @@
     <Content Include="Content\images\wallet-img.jpg" />
     <Content Include="Content\images\women-bag-img.jpg" />
     <Content Include="Content\images\women-shoes-img.jpg" />
+    <Content Include="Content\ItemImages\Breyani - Copy.jpg" />
+    <Content Include="Content\ItemImages\Breyani.jpg" />
+    <Content Include="Content\ItemImages\Breyani200245927 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Breyani200245927.jpg" />
+    <Content Include="Content\ItemImages\Breyani204339224 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Breyani204339224.jpg" />
+    <Content Include="Content\ItemImages\Breyani205951598 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Breyani205951598.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry and Rice %28Cropped%29 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry and Rice %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry and Rice - Copy.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry and Rice.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry and Rice200918811 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry and Rice200918811.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry bunny - Copy.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry bunny.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry bunny200736120 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry bunny200736120.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry bunny201756606 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Chicken Curry bunny201756606.jpg" />
+    <Content Include="Content\ItemImages\Coca Cola %28Cropped%29 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Coca Cola %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\Coca Cola - Copy.jpg" />
+    <Content Include="Content\ItemImages\Coca Cola.jpg" />
+    <Content Include="Content\ItemImages\Curry and Rice201043586 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Curry and Rice201043586.jpg" />
+    <Content Include="Content\ItemImages\Curry and Rice203146463 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Curry and Rice203146463.jpg" />
+    <Content Include="Content\ItemImages\Danny%27s Restaurant - Copy.jpg" />
+    <Content Include="Content\ItemImages\Danny%27s Restaurant.jpg" />
+    <Content Include="Content\ItemImages\dannys-house-nics-Small205624874 - Copy.jpg" />
+    <Content Include="Content\ItemImages\dannys-house-nics-Small205624874.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger %28Cropped%29 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger - Copy.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger200129657 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger200129657.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger201414037 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Double Cheeseburger201414037.jpg" />
+    <Content Include="Content\ItemImages\Grilled Cheese Sandwich200251292 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Grilled Cheese Sandwich200251292.jpg" />
+    <Content Include="Content\ItemImages\Indian Food - Copy.jpg" />
+    <Content Include="Content\ItemImages\Indian Food.jpg" />
+    <Content Include="Content\ItemImages\Mutton Bunny Chow %28Cropped%29 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Mutton Bunny Chow %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\Mutton Bunny Chow.jpg" />
+    <Content Include="Content\ItemImages\Mutton Bunny Chow200354275 - Copy.jpg" />
+    <Content Include="Content\ItemImages\Mutton Bunny Chow200354275.jpg" />
+    <Content Include="Content\ItemImages\Mutton Bunny Chow205753098.jpg" />
+    <Content Include="Content\ItemImages\Mutton-Bunny-Chow-recipe - Copy.jpg" />
+    <Content Include="Content\ItemImages\Mutton-Bunny-Chow-recipe.jpg" />
+    <Content Include="Content\ItemImages\Samoosa %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\Samoosa.jpg" />
+    <Content Include="Content\ItemImages\Samoosa201743537.jpg" />
+    <Content Include="Content\ItemImages\Sandwiches %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\Sandwiches.jpg" />
+    <Content Include="Content\ItemImages\Sandwiches205213831.jpg" />
+    <Content Include="Content\ItemImages\sugar beans bunny chow %28Cropped%29.jpg" />
+    <Content Include="Content\ItemImages\sugar beans bunny chow.jpg" />
+    <Content Include="Content\ItemImages\sugar beans bunny chow200556544.jpg" />
     <Content Include="Content\js\baguetteBox.min.js" />
     <Content Include="Content\js\bootsnav.js" />
     <Content Include="Content\js\bootstrap-select.js" />
@@ -367,6 +428,18 @@
     <Content Include="Content\webfonts\fa-brands-400.svg" />
     <Content Include="Content\webfonts\fa-regular-400.svg" />
     <Content Include="Content\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\WebsiteImages\Cart Icon %28White%29.png" />
+    <Content Include="Content\WebsiteImages\Chicken-Burgers-4.jpg" />
+    <Content Include="Content\WebsiteImages\Danny%27s House of Curries Logo.jpg" />
+    <Content Include="Content\WebsiteImages\Danny%27s House.jpg" />
+    <Content Include="Content\WebsiteImages\Danny%27s Restaurant.jpg" />
+    <Content Include="Content\WebsiteImages\dannys-house-nics-Small.jpg" />
+    <Content Include="Content\WebsiteImages\DHoC.jpg" />
+    <Content Include="Content\WebsiteImages\Foooood.jpg" />
+    <Content Include="Content\WebsiteImages\Indian Food.jpg" />
+    <Content Include="Content\WebsiteImages\Queue.jpg" />
+    <Content Include="Content\WebsiteImages\The Restaurant.jpg" />
+    <Content Include="Content\WebsiteImages\Venue.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -485,8 +558,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
-    <Folder Include="Content\ItemImages\" />
-    <Folder Include="Content\WebsiteImages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -505,8 +576,8 @@
     <EmbeddedResource Include="Migrations\202005061454489_InitialCreate.resx">
       <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007261705256_InitialModel.resx">
-      <DependentUpon>202007261705256_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010121606000_InitialModel.resx">
+      <DependentUpon>202010121606000_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
