@@ -33,6 +33,8 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    @Scripts.Render("~/bundles/jquery")
+
 
 </head>
 
@@ -771,7 +773,7 @@
 
 
 
-    @Scripts.Render("~/bundles/jquery")
+    
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
