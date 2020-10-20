@@ -38,6 +38,7 @@ namespace Sharpshooter.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -47,5 +48,7 @@ namespace Sharpshooter.Models
         }
 
         public System.Data.Entity.DbSet<Sharpshooter.ViewModel.ShoppingCartViewModel> ShoppingCartViewModels { get; set; }
+
+       
     }
 }

@@ -244,7 +244,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\EmployeeInventoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoriesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuGroupsController.cs" />
     <Compile Include="Controllers\MenuItemsController.cs" />
@@ -255,18 +257,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005061454489_InitialCreate.cs" />
-    <Compile Include="Migrations\202005061454489_InitialCreate.Designer.cs">
-      <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010121606000_InitialModel.cs" />
-    <Compile Include="Migrations\202010121606000_InitialModel.Designer.cs">
-      <DependentUpon>202010121606000_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202010132045466_InitialModel.cs" />
+    <Compile Include="Migrations\202010132045466_InitialModel.Designer.cs">
+      <DependentUpon>202010132045466_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuGroup.cs" />
@@ -555,6 +554,17 @@
     <Content Include="Views\PayPal\Success.cshtml" />
     <Content Include="Views\PayPal\DetailsOrder.cshtml" />
     <Content Include="Views\Checkout\PayAtStore.cshtml" />
+    <Content Include="Views\Inventories\Create.cshtml" />
+    <Content Include="Views\Inventories\Delete.cshtml" />
+    <Content Include="Views\Inventories\Details.cshtml" />
+    <Content Include="Views\Inventories\Edit.cshtml" />
+    <Content Include="Views\Inventories\Index.cshtml" />
+    <Content Include="Views\Inventories\SendEmail.cshtml" />
+    <Content Include="Views\EmployeeInventory\Create.cshtml" />
+    <Content Include="Views\EmployeeInventory\Delete.cshtml" />
+    <Content Include="Views\EmployeeInventory\Details.cshtml" />
+    <Content Include="Views\EmployeeInventory\Edit.cshtml" />
+    <Content Include="Views\EmployeeInventories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -573,11 +583,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005061454489_InitialCreate.resx">
-      <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010121606000_InitialModel.resx">
-      <DependentUpon>202010121606000_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010132045466_InitialModel.resx">
+      <DependentUpon>202010132045466_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
