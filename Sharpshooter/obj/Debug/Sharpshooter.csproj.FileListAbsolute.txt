@@ -1550,7 +1550,6 @@ F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\bin\Microsoft.Owin.Secu
 F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\bin\Microsoft.Owin.Security.OAuth.xml
 F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
 F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialCreate.resources
 F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
 F:\DUT\3rd year\AppDev 3A\New Sharpshooters\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache
