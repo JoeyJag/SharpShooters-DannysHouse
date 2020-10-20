@@ -558,6 +558,8 @@
     <Content Include="Views\Checkout\AllOrders.cshtml" />
     <Content Include="Views\Home\SalesChart.cshtml" />
     <Content Include="Views\Home\DateSales.cshtml" />
+    <Content Include="Views\Home\FoodSold.cshtml" />
+    <Content Include="Views\Home\DSales.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />

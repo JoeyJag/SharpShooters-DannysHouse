@@ -48,6 +48,16 @@ namespace Sharpshooter.Controllers
             return Json(query, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult FoodSold()
+        {
+            return PartialView("FoodSold", db.OrderDetails.ToList());
+        }
+
+        public ActionResult DSales()
+        {
+            return PartialView("DSales", db.Orders.ToList());
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
