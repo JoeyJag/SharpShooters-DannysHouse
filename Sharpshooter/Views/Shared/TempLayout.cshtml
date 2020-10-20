@@ -149,6 +149,7 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
                                 <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
+                                
                             </ul>
                             }
                         </li>
@@ -156,18 +157,20 @@
                         <li>
                             @if (User.IsInRole("Employee"))
                             {
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                <li>@Html.ActionLink("Inventory", "Index", "EmployeeInventories")</li>
+                            </ul>
                             }
                         </li>
 
                         <li>
                             @if (User.IsInRole("Manager"))
                             {
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                <li>@Html.ActionLink("Inventory", "Index", "Inventories")</li>
+                            </ul>
                             }
                         </li>
                         
