@@ -14,7 +14,29 @@ namespace Sharpshooter.Models
         public decimal UnitPrice { get; set; }
 
         public bool OrderStatus { get; set; }
+        public bool DeliveryStatus { get; set; }
+        public bool DeliveryProcess { get; set; }
+        public string CurrentDeliveryProcess { get; set; }
+
         public virtual MenuItem MenuItem { get; set; }
         public virtual Order Order { get; set; }
+
+
+
+        public string getDeliveryProcess()
+        {
+
+            
+            if(DeliveryProcess == true)
+            {
+                CurrentDeliveryProcess = "In Progress";
+            }
+            else
+            {
+                CurrentDeliveryProcess = "Open";
+            }
+
+            return CurrentDeliveryProcess;
+        }
     }
 }

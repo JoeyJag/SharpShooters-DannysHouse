@@ -5,60 +5,93 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>Current Orders</h2>
 
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>CURRENT ORDERS</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">CURRENT ORDERS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
 @*<p>
-    @Html.ActionLink("Create New", "Create")
-</p>*@
-<br />
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Order.OrderId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Order.Username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UnitPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OrderStatus)
-        </th>
-        <th></th>
-    </tr>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Order.OrderId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Order.Username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnitPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderStatus)
-            </td>
-            <td>
-                @Html.ActionLink("Update", "Edit", new { id = item.OrderDetailId }) |
-            </td>
-        </tr>
-    }
 
-</table>
+@*<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">*@
+
+<br /><br />
+
+                <h2 class="noo-sh-title">Current Orders</h2>
+
+
+                <br />
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Order.OrderId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Order.Username)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Quantity)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UnitPrice)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.OrderStatus)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Order.OrderId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Order.Username)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantity)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UnitPrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.OrderStatus)
+                            </td>
+                            <td>
+                               | @Html.ActionLink("Complete Order", "Edit", new { id = item.OrderDetailId }) |
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+            @*</div>
+
+        </div>
+    </div>
+</div>*@
