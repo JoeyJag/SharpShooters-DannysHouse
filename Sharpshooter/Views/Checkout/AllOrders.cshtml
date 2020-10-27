@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Sharpshooter.Models.Order>
+
+@{
+    ViewBag.Title = "AllOrders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    table.a{
+        width: 150px;
+        border: 1px solid black;
+    }
+</style>
+<h2>AllOrders</h2>
+
+
+<table class="a">
+    <div>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th></th>
+        </tr>
+    </div>
+
+@foreach (var item in Model) {
+    <div>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+        </tr>
+    </div>
+}
+
+</table>

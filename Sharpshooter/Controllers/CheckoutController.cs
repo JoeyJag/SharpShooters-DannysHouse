@@ -78,7 +78,12 @@ namespace Sharpshooter.Controllers
             return PartialView("DetailsOrder", db.OrderDetails.Where(x => x.OrderId == id).ToList());
         }
 
-            public ActionResult Complete(int id)
+        public ActionResult AllOrders()
+        {
+            return View(db.Orders.ToList());
+        }
+
+        public ActionResult Complete(int id)
             {
             Order order = new Order();
             order = db.Orders.Where(x => x.OrderId == id).FirstOrDefault();
