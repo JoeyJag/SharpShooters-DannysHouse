@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Sharpshooter.Models.OrderDetail>
+
+@{
+    ViewBag.Title = "Deliveries in Progress";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+
+
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>DELIVERIES IN PROGRESS</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">DELIVERIES IN PROGRESS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+
+
+
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">Deliveries In Progress</h2>
+
+
+
+
+
+
+
+
+                <br />
+                <table class="table-bordered">
+                    @*<tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Order.OrderId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Order.Username)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Order.Address)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Order.City)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Order.Phone)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Quantity)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.UnitPrice)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.OrderStatus)
+                            </th>
+                            <th></th>
+                        </tr>*@
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <p>@Html.DisplayNameFor(model => model.Order.OrderId): @Html.DisplayFor(modelItem => item.Order.OrderId)    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  @Html.DisplayNameFor(model => model.DeliveryStatus):  <b>@Html.DisplayFor(modelItem => item.CurrentDeliveryProcess)</b></p> <br />
+
+                                <p>@Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle): @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)  &nbsp;    |   &nbsp;   @Html.DisplayNameFor(model => model.Order.Username): @Html.DisplayFor(modelItem => item.Order.Username)</p>
+
+                                <p><b>@Html.DisplayNameFor(model => model.Order.Address): @Html.DisplayFor(modelItem => item.Order.Address)</b>   &nbsp;   |  &nbsp;    <b>@Html.DisplayNameFor(model => model.Order.City): @Html.DisplayFor(modelItem => item.Order.City)</b></p>
+
+                                <p><b>@Html.DisplayNameFor(model => model.Order.Phone): @Html.DisplayFor(modelItem => item.Order.Phone)</b>   &nbsp;   |  &nbsp;    @Html.DisplayNameFor(model => model.Quantity): @Html.DisplayFor(modelItem => item.Quantity)</p>
+
+                                <p>@Html.DisplayNameFor(model => model.UnitPrice): @Html.DisplayFor(modelItem => item.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@     <br />
+
+                                <p>| @Html.ActionLink("Completed", "DeliveryEdit", new { id = item.OrderDetailId }) |</p>
+
+
+
+
+
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </table>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

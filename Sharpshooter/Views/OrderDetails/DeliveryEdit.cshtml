@@ -1,0 +1,178 @@
+﻿@model Sharpshooter.Models.OrderDetail
+
+@{
+    ViewBag.Title = "DeliveryEdit";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+
+
+
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">Completing Current Delivery</h2>
+
+
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Delivery Details</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.OrderDetailId)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.OrderId, "OrderId", htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.OrderId, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.OrderId, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    @*@Html.DisplayFor(model => model.MenuItem.MenuItemTitle)*@
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MenuItemID, "MenuItem", htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.DropDownList("MenuItemID", null, htmlAttributes: new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.MenuItemID, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Order.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.Order.Username, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Order.Username, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Order.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.Order.Address, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Order.Address, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Order.City, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.Order.City, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Order.City, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Order.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.Order.Phone, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Order.Phone, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    @*@Html.TextBoxFor(model => model.Quantity, new { @readonly = true })*@
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.Quantity, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.UnitPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;
+                        @Html.TextBoxFor(model => model.UnitPrice, new { @readonly = true })
+                        @Html.ValidationMessageFor(model => model.UnitPrice, "", new { @class = "text-danger" })
+
+                    </div>
+
+
+                    @Html.HiddenFor(model => model.OrderStatus)
+                    @Html.HiddenFor(model => model.DeliveryProcess)
+
+
+                    @*<div class="form-group">
+            @Html.LabelFor(model => model.OrderStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.OrderStatus)
+                    @Html.ValidationMessageFor(model => model.OrderStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>*@
+
+
+                    <div class="form-group">
+
+
+                        <div class="checkbox">
+                            @Html.LabelFor(model => model.DeliveryStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            @Html.EditorFor(model => model.DeliveryStatus)
+                            @Html.ValidationMessageFor(model => model.DeliveryStatus, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+
+
+                    @*<div class="form-group">
+
+
+            <div class="checkbox">
+                @Html.LabelFor(model => model.DeliveryProcess, htmlAttributes: new { @class = "control-label col-md-2" })
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                @Html.EditorFor(model => model.DeliveryProcess)
+                @Html.ValidationMessageFor(model => model.DeliveryProcess, "", new { @class = "text-danger" })
+            </div>
+
+        </div>*@
+
+
+
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Complete Delivery" class="btn btn-default" onclick="alert('Delivery has been Completed')" />
+
+                        </div>
+
+                    </div>
+                </div>
+                }
+
+                <div>
+                    @Html.ActionLink("Back to List", "Delivery")
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

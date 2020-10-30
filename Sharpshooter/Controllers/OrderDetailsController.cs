@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Sharpshooter.Models;
 
 namespace Sharpshooter.Controllers
@@ -13,6 +14,16 @@ namespace Sharpshooter.Controllers
     public class OrderDetailsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
+
+        public ActionResult ListPage()
+        {
+            var context = new ApplicationDbContext();
+            var users = context.Users.ToList();
+
+            return View(users);           
+        }
+
         
         // GET: OrderDetails
         public ActionResult Index()
@@ -22,6 +33,38 @@ namespace Sharpshooter.Controllers
 
             return View(orderDetails.Where(x => x.OrderStatus == false).ToList());
         }
+
+
+
+        public ActionResult Delivery()
+        {  // View(db.GameDetails.Where(x => x.Genre == search || search == null).ToList());
+
+            var orderDetails = db.OrderDetails.Include(o => o.MenuItem).Include(o => o.Order);
+
+            var DeliveryDetails = orderDetails.Where(x => x.OrderStatus == true).ToList();
+
+            var DeliProg = DeliveryDetails.Where(x => x.DeliveryStatus == false).ToList();
+
+            return View(DeliProg.Where(x => x.DeliveryProcess == true).ToList());
+        }
+
+
+
+        public ActionResult OpenDeliveries()
+        {  // View(db.GameDetails.Where(x => x.Genre == search || search == null).ToList());
+
+            var orderDetails = db.OrderDetails.Include(o => o.MenuItem).Include(o => o.Order);
+
+            var DeliveryDetails = orderDetails.Where(x => x.OrderStatus == true).ToList();
+
+            var DeliProg = DeliveryDetails.Where(x => x.DeliveryStatus == false).ToList();
+
+            return View(DeliProg.Where(x => x.DeliveryProcess == false).ToList());
+        }
+
+
+
+
 
         // GET: OrderDetails/Details/5
         public ActionResult Details(int? id)
@@ -51,10 +94,12 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,Quantity,UnitPrice")] OrderDetail orderDetail)
+        public ActionResult Create([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
+                orderDetail.CurrentDeliveryProcess = orderDetail.getDeliveryProcess();
+
                 db.OrderDetails.Add(orderDetail);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -64,6 +109,89 @@ namespace Sharpshooter.Controllers
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);
         }
+
+
+
+
+        public ActionResult DeliveryProgress(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            OrderDetail orderDetail = db.OrderDetails.Find(id);
+            if (orderDetail == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
+            ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
+            return View(orderDetail);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeliveryProgress([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
+        {
+            if (ModelState.IsValid)
+            {
+                orderDetail.CurrentDeliveryProcess = orderDetail.getDeliveryProcess();
+
+                db.Entry(orderDetail).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("OpenDeliveries");
+            }
+            ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
+            ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
+            return View(orderDetail);
+        }
+
+
+
+
+
+
+
+
+        public ActionResult DeliveryEdit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            OrderDetail orderDetail = db.OrderDetails.Find(id);
+            if (orderDetail == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
+            ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
+            return View(orderDetail);
+        }
+
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeliveryEdit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
+        {
+            if (ModelState.IsValid)
+            {
+                orderDetail.CurrentDeliveryProcess = orderDetail.getDeliveryProcess();
+
+                db.Entry(orderDetail).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Delivery");
+            }
+            ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
+            ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
+            return View(orderDetail);
+        }
+
+
+
+
+
 
         // GET: OrderDetails/Edit/5
         public ActionResult Edit(int? id)
@@ -87,14 +215,18 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,Quantity,UnitPrice")] OrderDetail orderDetail)
+        public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
+                orderDetail.CurrentDeliveryProcess = orderDetail.getDeliveryProcess();
+
                 db.Entry(orderDetail).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);

@@ -1,66 +1,109 @@
 ﻿@model Sharpshooter.Models.OrderDetail
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Viewing Delivery";
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>OrderDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MenuItem.MenuItemTitle)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Order.Username)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Order.Username)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Quantity)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Quantity)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UnitPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UnitPrice)
-        </dd>
 
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OrderStatus)
-        </dt>
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">Viewing Delivery</h2>
+                <p>
 
-        <dd>
-            @Html.DisplayFor(model => model.OrderStatus)
-        </dd>
 
-    </dl>
+                    @*<h3>Are you sure you want to delete this?</h3>*@
+                    <div>
+                        <h4>Details of Delivery</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Order.OrderId): @Html.DisplayFor(model => model.Order.OrderId)
+                            </dt>
+                          
+
+                            <dd>
+                                @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle): @Html.DisplayFor(model => model.MenuItem.MenuItemTitle)
+                            </dd>
+
+                          
+
+                            <dd>
+                                @Html.DisplayNameFor(model => model.Order.Username): @Html.DisplayFor(model => model.Order.Username)
+                            </dd>
+
+
+
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Order.Address): @Html.DisplayFor(model => model.Order.Address)
+                            </dt>
+
+                            <dd>
+                                <b></b>
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Order.City): @Html.DisplayFor(model => model.Order.City)
+                            </dt>
+
+                            <dd>
+                                <b></b>
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Order.Phone): @Html.DisplayFor(model => model.Order.Phone)
+                            </dt>
+
+
+
+                            <dd>
+                                @Html.DisplayNameFor(model => model.Quantity): @Html.DisplayFor(model => model.Quantity)
+                            </dd>
+
+                           
+
+                            <dd>
+                                @Html.DisplayNameFor(model => model.UnitPrice): @Html.DisplayFor(model => model.UnitPrice)
+                            </dd>
+
+
+                            
+
+                            <dd>
+                                @Html.DisplayNameFor(model => model.OrderStatus): @Html.DisplayFor(model => model.OrderStatus)
+                            </dd>
+
+                        </dl>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-actions no-color">
+                                <input type="submit" value="Complete Delivery" class="btn btn-default" /> |
+                                @Html.ActionLink("Back to List", "Delivery")
+                            </div>
+                        }
+                    </div>
+
+
+
+
+
+                </p>
+
+            </div>
+
         </div>
-    }
+    </div>
 </div>
+
+
+
+
