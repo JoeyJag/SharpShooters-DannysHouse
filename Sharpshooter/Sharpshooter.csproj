@@ -251,6 +251,7 @@
     <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\OrderDetailsController.cs" />
     <Compile Include="Controllers\PayPalController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -263,6 +264,14 @@
     <Compile Include="Migrations\202010121606000_InitialModel.Designer.cs">
       <DependentUpon>202010121606000_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010270420592_InitialModel1.cs" />
+    <Compile Include="Migrations\202010270420592_InitialModel1.Designer.cs">
+      <DependentUpon>202010270420592_InitialModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010291909379_InitialModel2.cs" />
+    <Compile Include="Migrations\202010291909379_InitialModel2.Designer.cs">
+      <DependentUpon>202010291909379_InitialModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -273,6 +282,7 @@
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="PayPal\PDTHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -444,6 +454,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Empty-star.png" />
+    <Content Include="Images\Filled-star.png" />
     <Content Include="Rotativa\help-wkhtmltoimage.txt" />
     <Content Include="Rotativa\help-wkhtmltopdf.txt" />
     <Content Include="Rotativa\wkhtmltoimage.exe" />
@@ -558,6 +570,12 @@
     <Content Include="Views\Checkout\AllOrders.cshtml" />
     <Content Include="Views\Home\SalesChart.cshtml" />
     <Content Include="Views\Home\DateSales.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\Reviews\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -581,6 +599,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010121606000_InitialModel.resx">
       <DependentUpon>202010121606000_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010270420592_InitialModel1.resx">
+      <DependentUpon>202010270420592_InitialModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010291909379_InitialModel2.resx">
+      <DependentUpon>202010291909379_InitialModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

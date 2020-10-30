@@ -22,6 +22,8 @@ namespace Sharpshooter.Models
 
         public virtual List<OrderDetail> OrderDetails { get; set; }
 
+        public virtual List<Review> Review { get; set; }
+
 
 
         [Required(ErrorMessage ="A title is required for the menu item")]
