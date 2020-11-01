@@ -1,5 +1,5 @@
 ﻿
-@{
+@*@{
     ViewBag.Title = "ListPage";
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
@@ -17,11 +17,11 @@
     {
     foreach(var role in user.Roles)
     {
-    usersAndRoles.Add(new UserRoleModel
+    usersAndRoles.Add(new UserRoleModel)
     {
     UserName = user.UserName,
     RoleName = role.Name
     };
     }
     }
-    }
+    }*@

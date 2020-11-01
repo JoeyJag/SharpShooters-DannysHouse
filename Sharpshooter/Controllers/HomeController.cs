@@ -16,6 +16,12 @@ namespace Sharpshooter.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+
         public ActionResult DateSales()
         {
             return View();

@@ -133,6 +133,7 @@
                         <li>@Html.ActionLink("Menu", "ViewMenuAll", "Menus")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
                         @*<li>@Html.ActionLink("Current Deliveries", "Delivery", "OrderDetails")</li>*@
                         @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>*@
                         @*<li>@Html.ActionLink("Success Screen", "Success", "PayPal")</li>*@
@@ -147,43 +148,43 @@
                         <li>
                             @if (User.IsInRole("Admin"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
-                                
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>*@
+                                    <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
+
+                                </ul>
                             }
                         </li>
 
                         <li>
                             @if (User.IsInRole("Employee"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Inventory", "Index", "EmployeeInventories")</li>
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Inventory", "Index", "EmployeeInventories")</li>
+                                </ul>
                             }
                         </li>
 
                         <li>
                             @if (User.IsInRole("Manager"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Inventory", "Index", "Inventories")</li>
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Inventory", "Index", "Inventories")</li>
+                                </ul>
                             }
                         </li>
 
                         <li>
                             @if (User.IsInRole("Delivery"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>
+                                </ul>
                             }
                         </li>
 

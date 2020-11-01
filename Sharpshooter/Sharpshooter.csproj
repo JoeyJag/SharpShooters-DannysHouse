@@ -253,13 +253,14 @@
     <Compile Include="Controllers\MenusController.cs" />
     <Compile Include="Controllers\OrderDetailsController.cs" />
     <Compile Include="Controllers\PayPalController.cs" />
+    <Compile Include="Controllers\ReviewsController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011011134458_InitialModel.cs" />
-    <Compile Include="Migrations\202011011134458_InitialModel.Designer.cs">
-      <DependentUpon>202011011134458_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202011012005586_InitialModel.cs" />
+    <Compile Include="Migrations\202011012005586_InitialModel.Designer.cs">
+      <DependentUpon>202011012005586_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -272,6 +273,7 @@
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="PayPal\PDTHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -443,6 +445,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Empty-star.png" />
+    <Content Include="Images\Filled-star.png" />
     <Content Include="Rotativa\help-wkhtmltoimage.txt" />
     <Content Include="Rotativa\help-wkhtmltopdf.txt" />
     <Content Include="Rotativa\wkhtmltoimage.exe" />
@@ -574,6 +578,11 @@
     <Content Include="Views\Inventories\Details.cshtml" />
     <Content Include="Views\Inventories\Edit.cshtml" />
     <Content Include="Views\Inventories\Index.cshtml" />
+    <Content Include="Views\Reviews\Create.cshtml" />
+    <Content Include="Views\Reviews\Delete.cshtml" />
+    <Content Include="Views\Reviews\Details.cshtml" />
+    <Content Include="Views\Reviews\Edit.cshtml" />
+    <Content Include="Views\Reviews\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -592,8 +601,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011011134458_InitialModel.resx">
-      <DependentUpon>202011011134458_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011012005586_InitialModel.resx">
+      <DependentUpon>202011012005586_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -7,6 +7,27 @@
 
 
 
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>REVIEWS</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">REVIEWS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br /><br />
+
+<h2 class="noo-sh-title">Reviews</h2>
+
+<br />
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -27,22 +48,23 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewOfItem)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewOfItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
 
-    </tr>
-}
+        </tr>
+    }
 
 </table>
