@@ -243,6 +243,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminInventoriesController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\EmployeeInventoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -258,9 +259,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011012005586_InitialModel.cs" />
-    <Compile Include="Migrations\202011012005586_InitialModel.Designer.cs">
-      <DependentUpon>202011012005586_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202011012105330_InitialModel.cs" />
+    <Compile Include="Migrations\202011012105330_InitialModel.Designer.cs">
+      <DependentUpon>202011012105330_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -583,6 +584,17 @@
     <Content Include="Views\Reviews\Details.cshtml" />
     <Content Include="Views\Reviews\Edit.cshtml" />
     <Content Include="Views\Reviews\Index.cshtml" />
+    <Content Include="Views\AdminInventories\Create.cshtml" />
+    <Content Include="Views\AdminInventories\Delete.cshtml" />
+    <Content Include="Views\AdminInventories\Details.cshtml" />
+    <Content Include="Views\AdminInventories\Edit.cshtml" />
+    <Content Include="Views\AdminInventories\Index.cshtml" />
+    <Content Include="Views\AdminInventories\lowStock.cshtml" />
+    <Content Include="Views\AdminInventories\SendEmail.cshtml" />
+    <Content Include="Views\EmployeeInventories\lowStock.cshtml" />
+    <Content Include="Views\Inventories\lowStock.cshtml" />
+    <Content Include="Views\Home\ViewDateSale.cshtml" />
+    <Content Include="Views\Checkout\AllOrders.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -601,8 +613,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011012005586_InitialModel.resx">
-      <DependentUpon>202011012005586_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011012105330_InitialModel.resx">
+      <DependentUpon>202011012105330_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
