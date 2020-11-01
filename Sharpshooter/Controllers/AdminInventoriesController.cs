@@ -11,9 +11,9 @@ using Sharpshooter.Models;
 
 namespace Sharpshooter.Controllers
 {
-    public class EmployeeInventoriesController : Controller
+    public class AdminInventoriesController : Controller
     {
-        //send email
+        //email code
         public ActionResult SendEmail()
         {
             return View();
@@ -26,7 +26,7 @@ namespace Sharpshooter.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    ViewBag.Success = "Success, Manager has been informed";
+                    ViewBag.Success = "Success, Email has been sent";
                     var senderEmail = new MailAddress("taslyn.moopanar@gmail.com", "Employee");
                     var receiverEmail = new MailAddress("tasmoop@gmail.com", "Receiver");
                     var password = "B@dboy2968";
@@ -64,7 +64,7 @@ namespace Sharpshooter.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
-        //filtering
+        //sorting code
         public ViewResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_asc" : "";
@@ -73,12 +73,16 @@ namespace Sharpshooter.Controllers
             var inventory = from s in db.Inventories
                             select s;
 
-            //searchbar
+            //search function
             if (!String.IsNullOrEmpty(searchString))
             {
                 inventory = inventory.Where(s => s.Name.Contains(searchString));
 
             }
+
+            
+
+
 
 
 
@@ -100,14 +104,29 @@ namespace Sharpshooter.Controllers
             }
             return View(inventory.ToList());
         }
+
+
         //low stock code
         public ViewResult lowStock(string sortOrder, string searchString)
         {
             var inventory = from s in db.Inventories
                             select s;
 
-            return View(inventory.Where(i => (i.Name.Equals("Fanta") && i.QuantityRemaining < 10) || (i.Name.Equals("Mutton") && i.QuantityRemaining < 30) || (i.Name.Equals("Beans") && i.QuantityRemaining < 40)));
+            return View(inventory.Where(i => (i.Name.Equals("Fanta") && i.QuantityRemaining < 10) ||
+            (i.Name.Equals("Mutton") && i.QuantityRemaining < 30) ||
+            (i.Name.Equals("Beans") && i.QuantityRemaining < 40) ||
+            (i.Name.Equals("Chicken") && i.QuantityRemaining < 30) || 
+            (i.Name.Equals("Creme soda") && i.QuantityRemaining < 10) ||
+             (i.Name.Equals("Bread") && i.QuantityRemaining < 13) ||
+            (i.Name.Equals("Carrots") && i.QuantityRemaining < 15) || 
+            (i.Name.Equals("Milk") && i.QuantityRemaining < 5) ||
+            (i.Name.Equals("Onion") && i.QuantityRemaining < 10) || 
+            (i.Name.Equals("Tomatoe") && i.QuantityRemaining < 15) || 
+            (i.Name.Equals("Potatoe") && i.QuantityRemaining < 15) ||
+            (i.Name.Equals("Roti") && i.QuantityRemaining < 20)));
         }
+
+
 
         // GET: Inventories/Details/5
         public ActionResult Details(int? id)

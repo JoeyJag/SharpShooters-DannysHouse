@@ -3,45 +3,28 @@
 @{ ViewBag.Title = "Index";
     Layout = "~/Views/Shared/TempLayout.cshtml"; }
 
-
-<div class="all-title-box">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>INVENTORY</h2>
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">INVENTORY</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<br /><br />
-
-      <h2 class="noo-sh-title">Inventory</h2>
-
-<br />
-
-
+<h1>Stock Inventory</h1>
 
 @using (Html.BeginForm())
 {
-    <p>
-        Find by name: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" />
-    </p>}
+    <span style="text-align: right">
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    </span>
+}
 
 
-<p>
-    <input type="button" value="Send Email" onclick="location.href='@Url.Action("SendEmail", "EmployeeInventories")'" />
-</p>
+@*<p>
+        <input type="button" value="Send Email" onclick="location.href='@Url.Action("SendEmail", "Inventories")'" />
+    </p>*@
 @*<p>
         @Html.ActionLink("Add New Item", "Create")
     </p>*@
 
+@*@Html.ActionLink("View Low Stock ", "lowStock")*@
+<input type="button" value="View Low Stock" onclick="location.href='@Url.Action("lowStock", "EmployeeInventories")'" />
 
 
 <table class="table">

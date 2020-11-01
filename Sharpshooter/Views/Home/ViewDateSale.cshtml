@@ -1,5 +1,11 @@
 ﻿@model IEnumerable<Sharpshooter.Models.Order>
 
+@{
+    ViewBag.Title = "ViewDateSale";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>ViewDateSale</h2>
 @using (Html.BeginForm())
 {
     <div>
@@ -8,13 +14,11 @@
         <input type="submit" value="Get Records Between Dates" />
     </div>
 
+
     <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.OrderDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
@@ -25,7 +29,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Phone)
             </th>
-
             <th></th>
         </tr>
 
@@ -36,9 +39,6 @@
                     @Html.DisplayFor(modelItem => item.OrderDate)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.FirstName)
                 </td>
                 <td>
@@ -46,6 +46,12 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OrderId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.OrderId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderId })
                 </td>
             </tr>
         }
