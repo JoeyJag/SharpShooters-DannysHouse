@@ -7,13 +7,13 @@ namespace Sharpshooter.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class InitalModel : IMigrationMetadata
+    public sealed partial class InitialModel2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitalModel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialModel2));
         
         string IMigrationMetadata.Id
         {
-            get { return "202010281207472_InitalModel"; }
+            get { return "202010291909379_InitialModel2"; }
         }
         
         string IMigrationMetadata.Source

@@ -25,7 +25,7 @@ namespace Sharpshooter.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    ViewBag.Success = "Success, Manger has been informed";
+                    ViewBag.Success = "Success, Manager has been informed";
                     var senderEmail = new MailAddress("taslyn.moopanar@gmail.com", "Employee");
                     var receiverEmail = new MailAddress("tasmoop@gmail.com", "Receiver");
                     var password = "B@dboy2968";
