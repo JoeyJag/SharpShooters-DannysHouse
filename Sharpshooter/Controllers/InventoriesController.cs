@@ -63,7 +63,7 @@ namespace Sharpshooter.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
 
-
+        //filter code
         public ViewResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_asc" : "";
@@ -100,7 +100,14 @@ namespace Sharpshooter.Controllers
             return View(inventory.ToList());
         }
 
+        //low stock code
+        public ViewResult lowStock(string sortOrder, string searchString)
+        {
+            var inventory = from s in db.Inventories
+                            select s;
 
+            return View(inventory.Where(i => (i.Name.Equals("Fanta") && i.QuantityRemaining < 10) || (i.Name.Equals("Mutton") && i.QuantityRemaining < 30) || (i.Name.Equals("Beans") && i.QuantityRemaining < 40)));
+        }
 
         // GET: Inventories/Details/5
         public ActionResult Details(int? id)

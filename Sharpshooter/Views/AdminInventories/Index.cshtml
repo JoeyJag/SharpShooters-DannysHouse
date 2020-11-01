@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Sharpshooter.Models.Inventory>
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/TempLayout.cshtml"; }
+
+<h1>Stock Inventory</h1>
+
+@using (Html.BeginForm())
+{
+    <span style="text-align: right">
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    </span>
+}
+
+<p>
+    @*@Html.ActionLink("View Low Stock", "lowStock")*@
+    <input type="button" value="View Low Stock" onclick="location.href='@Url.Action("lowStock", "AdminInventories")'" /> <input type="button" value="Email Supplier" onclick="location.href='@Url.Action("SendEmail", "AdminInventories")'" />
+</p>
+
+
+
+<span style="text-align: right">
+    <p>
+        @Html.ActionLink("Add New Item", "Create")
+        @*<input type="button" value="Add New Item" onclick="location.href='@Url.Action("Create", "Inventories")'" />*@
+    </p>
+</span>
+
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                @Html.ActionLink("QuantityRemaining", "Index", new { sortOrder = ViewBag.QuantityRemainingSortParm })
+            </th>
+            <th>
+                UnitPrice
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantityRemaining)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PricePerUnit)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
