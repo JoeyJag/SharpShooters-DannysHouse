@@ -244,7 +244,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\EmployeeInventoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoriesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuGroupsController.cs" />
     <Compile Include="Controllers\MenuItemsController.cs" />
@@ -255,18 +257,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005061454489_InitialCreate.cs" />
-    <Compile Include="Migrations\202005061454489_InitialCreate.Designer.cs">
-      <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010201901255_InitialModel.cs" />
-    <Compile Include="Migrations\202010201901255_InitialModel.Designer.cs">
-      <DependentUpon>202010201901255_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202011011134458_InitialModel.cs" />
+    <Compile Include="Migrations\202011011134458_InitialModel.Designer.cs">
+      <DependentUpon>202011011134458_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\MenuGroup.cs" />
@@ -560,6 +559,21 @@
     <Content Include="Views\OrderDetails\ListPage.cshtml" />
     <Content Include="Views\OrderDetails\DeliveryProgress.cshtml" />
     <Content Include="Views\OrderDetails\OpenDeliveries.cshtml" />
+    <Content Include="Views\EmployeeInventories\Create.cshtml" />
+    <Content Include="Views\EmployeeInventories\Delete.cshtml" />
+    <Content Include="Views\EmployeeInventories\Details.cshtml" />
+    <Content Include="Views\EmployeeInventories\Edit.cshtml" />
+    <Content Include="Views\EmployeeInventories\Index.cshtml" />
+    <Content Include="Views\EmployeeInventories\SendEmail.cshtml" />
+    <Content Include="Views\Home\DateSales.cshtml" />
+    <Content Include="Views\Home\DSales.cshtml" />
+    <Content Include="Views\Home\FoodSold.cshtml" />
+    <Content Include="Views\Home\SalesChart.cshtml" />
+    <Content Include="Views\Inventories\Create.cshtml" />
+    <Content Include="Views\Inventories\Delete.cshtml" />
+    <Content Include="Views\Inventories\Details.cshtml" />
+    <Content Include="Views\Inventories\Edit.cshtml" />
+    <Content Include="Views\Inventories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -578,11 +592,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005061454489_InitialCreate.resx">
-      <DependentUpon>202005061454489_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010201901255_InitialModel.resx">
-      <DependentUpon>202010201901255_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011011134458_InitialModel.resx">
+      <DependentUpon>202011011134458_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
