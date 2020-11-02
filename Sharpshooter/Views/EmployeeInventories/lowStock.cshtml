@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sharpshooter.Models.Inventory>
+@{ ViewBag.Title = "lowStock";
+    Layout = "~/Views/Shared/TempLayout.cshtml"; }
+
+
+
+
+
+<table class="table">
+
+    <h2 class="noo-sh-title">Low Stock Inventory</h2>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityRemaining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricePerUnit)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>*@
+
+
+
+
+
+        </tr>
+    }
+
+</table>
+@Html.ActionLink("Return to Inventory ", "Index")

@@ -3,23 +3,49 @@
 @{ ViewBag.Title = "Index";
     Layout = "~/Views/Shared/TempLayout.cshtml"; }
 
-<h2>Inventory</h2>
+
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>STOCK INVENTORY</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">STOCK INVENTORY</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br /><br />
+
+      <h2 class="noo-sh-title">Stock Inventory</h2>
+
+<br />
+
 
 @using (Html.BeginForm())
 {
-<p>
-    Find by name: @Html.TextBox("SearchString")
-    <input type="submit" value="Search" />
-</p>}
+    <span style="text-align: right">
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    </span>
+}
 
 
-<p>
-    <input type="button" value="Send Email" onclick="location.href='@Url.Action("SendEmail", "Inventories")'" />
-</p>
+@*<p>
+        <input type="button" value="Send Email" onclick="location.href='@Url.Action("SendEmail", "Inventories")'" />
+    </p>*@
 @*<p>
         @Html.ActionLink("Add New Item", "Create")
     </p>*@
 
+@*@Html.ActionLink("View Low Stock ", "lowStock")*@
+<input type="button" value="View Low Stock" onclick="location.href='@Url.Action("lowStock", "EmployeeInventories")'" />
 
 
 <table class="table">
@@ -41,25 +67,25 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Type)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.QuantityRemaining)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PricePerUnit)
-    </td>
-    @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-        </td>*@
-</tr>
-}
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityRemaining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PricePerUnit)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>*@
+        </tr>
+    }
 
 </table>

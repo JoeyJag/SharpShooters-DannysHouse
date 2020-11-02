@@ -1,0 +1,25 @@
+﻿
+@{ ViewBag.Title = "SendEmail"; }
+
+
+<h2 class="noo-sh-title">Send Email</h2>
+
+@if (ViewBag.Success != null)
+{<h2> @ViewBag.Success </h2>} <form method="post"
+                                    action="SendEmail">
+    <div class="container">
+        <span class="form-control-static"> Receiver: </span> <input class="form-control"
+                                                                    type="text"
+                                                                    name="receiver" /> <br /> <span class="form-control-static"> Subject: </span> <input class="form-control"
+                                                                                                                                                         type="text"
+                                                                                                                                                         name="subject" /> <br /> <span class="form-control-static"> Message: </span> <input class="form-control"
+                                                                                                                                                                                                                                             type="text"
+                                                                                                                                                                                                                                             name="message" /> <br /> <input class="btn btn-primary"
+                                                                                                                                                                                                                                                                             type="submit"
+                                                                                                                                                                                                                                                                             value="Send" />
+    </div>
+</form>
+@Html.ActionLink("Return to Inventory ", "Index")
+
+
+

@@ -16,6 +16,12 @@ namespace Sharpshooter.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+
         public ActionResult DateSales()
         {
             return View();
@@ -39,7 +45,6 @@ namespace Sharpshooter.Controllers
 
         public ActionResult GetData()
         {
-
             ApplicationDbContext context = new ApplicationDbContext();
 
             var query = context.OrderDetails.Include("MenuItem")
@@ -53,9 +58,17 @@ namespace Sharpshooter.Controllers
             return PartialView("FoodSold", db.OrderDetails.ToList());
         }
 
-        public ActionResult DSales()
+        public ActionResult DSales(DateTime? start, DateTime? end)
         {
-            return PartialView("DSales", db.Orders.ToList());
+            var Dates = db.Orders.Where(t => t.OrderDate >= start && t.OrderDate <= end).ToList();
+            return PartialView("DSales", Dates);
+        }
+
+        public ActionResult ViewDateSale(DateTime? start, DateTime? end)
+        {
+            var Dates = db.Orders.Where(t => t.OrderDate >= start && t.OrderDate <= end).ToList();
+
+            return View(Dates);
         }
 
         public ActionResult Contact()
