@@ -1805,3 +1805,7 @@ C:\Users\Student\Documents\GitHub\SharpShooters-DannysHouse\Sharpshooter\obj\Deb
 C:\Users\Student\Documents\GitHub\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 C:\Users\Student\Documents\GitHub\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
 C:\Users\Student\Documents\GitHub\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CoreCompileInputs.cache
