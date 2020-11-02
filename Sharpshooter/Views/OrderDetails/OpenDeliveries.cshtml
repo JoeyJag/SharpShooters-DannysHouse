@@ -87,7 +87,7 @@
 
                                 <p><b>@Html.DisplayNameFor(model => model.Order.Phone): @Html.DisplayFor(modelItem => item.Order.Phone)</b>   &nbsp;   |  &nbsp;    @Html.DisplayNameFor(model => model.Quantity): @Html.DisplayFor(modelItem => item.Quantity)</p>
 
-                                <p>@Html.DisplayNameFor(model => model.UnitPrice): @Html.DisplayFor(modelItem => item.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@     <br />
+                                <p>@Html.DisplayNameFor(model => model.UnitPrice) (R): @Html.DisplayFor(modelItem => item.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@     <br />
 
                                 <p>| @Html.ActionLink("Accept", "DeliveryProgress", new { id = item.OrderDetailId }) |</p>
 
