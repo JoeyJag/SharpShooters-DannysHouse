@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Sharpshooter.Models.Review>
 
 @{
-    ViewBag.Title = "Reviews";
+    ViewBag.Title = "Admin page";
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
@@ -27,10 +27,15 @@
 <h2 class="noo-sh-title">Reviews</h2>
 
 <br />
-
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @using (Html.BeginForm("ViewReview", "Reviews", "RestaurantReview", FormMethod.Get))
+    {
+        <b> Search By User:</b>
+
+        @Html.TextBox("search")<input type="submit" value="Search" />
+    }
 </p>
+
 <table class="table">
     <tr>
         <th>
@@ -50,21 +55,25 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UserName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewOfItem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReviewOfItem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MenuItemID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MenuItemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MenuItemID }) |
+        </td>
+    </tr>
     }
 
 </table>

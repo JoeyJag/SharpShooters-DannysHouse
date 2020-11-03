@@ -21,6 +21,13 @@ namespace Sharpshooter.Controllers
             return View(reviews.ToList());
         }
 
+        public ActionResult ViewReview(string searchBy, string search)
+        {
+           
+                return View(db.Reviews.Where(x => x.UserName.StartsWith(search) || search == null).ToList());
+           
+        }
+
         // GET: Reviews/Details/5
         public ActionResult Details(int? id)
         {
@@ -54,7 +61,7 @@ namespace Sharpshooter.Controllers
             {
                 db.Reviews.Add(review);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("ViewReview");
             }
 
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", review.MenuItemID);

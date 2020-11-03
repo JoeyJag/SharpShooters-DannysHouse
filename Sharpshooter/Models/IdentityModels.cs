@@ -50,6 +50,6 @@ namespace Sharpshooter.Models
 
         public System.Data.Entity.DbSet<Sharpshooter.ViewModel.ShoppingCartViewModel> ShoppingCartViewModels { get; set; }
 
-       
+        public System.Data.Entity.DbSet<Sharpshooter.Models.RestaurantReview> RestaurantReviews { get; set; }
     }
 }

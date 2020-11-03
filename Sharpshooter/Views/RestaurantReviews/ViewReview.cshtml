@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<Sharpshooter.Models.RestaurantReview>
+
+@{
+    ViewBag.Title = "Restraurant Reviews";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Restaurant Reviews</h2>
+
+<p>
+    @Html.ActionLink("Write a Review", "Create")
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewOfRestraurant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewOfRestraurant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+        </tr>
+    }
+
+</table>
