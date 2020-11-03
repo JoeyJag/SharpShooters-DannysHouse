@@ -2052,11 +2052,6 @@ C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharp
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CoreCompileInputs.cache
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\bin\Sharpshooter.dll.config
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\bin\Sharpshooter.dll
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\bin\Sharpshooter.pdb
@@ -2106,6 +2101,10 @@ C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XmlDocument.dll
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XPath.dll
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XPath.XDocument.dll
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel1.resources
-C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CoreCompileInputs.cache
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
+C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb

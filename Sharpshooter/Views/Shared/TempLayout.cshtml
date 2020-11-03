@@ -133,7 +133,8 @@
                         <li>@Html.ActionLink("Menu", "ViewMenuAll", "Menus")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
+                        <li>@Html.ActionLink("Food Reviews", "ViewReview", "Reviews")</li>
+                        <li>@Html.ActionLink("Restaurant Reviews", "ViewReview", "RestaurantReviews")</li>
                         @*<li>@Html.ActionLink("Current Deliveries", "Delivery", "OrderDetails")</li>*@
                         @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>*@
                         @*<li>@Html.ActionLink("Success Screen", "Success", "PayPal")</li>*@
@@ -148,14 +149,14 @@
                         <li>
                             @if (User.IsInRole("Admin"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                              @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>*@
-                                <li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>
-                                <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
+                                <ul class="nav navbar-nav navbar-right">
+                                    @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                    <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
+                    <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>*@
+                                    <li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>
+                                    <li>@Html.ActionLink("Admin Panel", "AdminPanel", "Home")</li>
 
-                            </ul>
+                                </ul>
                             }
                         </li>
 
@@ -169,15 +170,25 @@
                             }
                         </li>
 
+                       <li>
+                            @if (User.IsInRole("Customer"))
+                            {
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Food Reviews", "Create", "Reviews")</li>
+                                <li>@Html.ActionLink("Restaurant Reviews", "Create", "RestaurantReviews")</li>
+                            </ul>
+                            }
+                        </li>
+
                         <li>
                             @if (User.IsInRole("Manager"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Inventory", "Index", "Inventories")</li>
-                                <li>@Html.ActionLink("Date Sales", "DateSales", "Home")</li>
-                                <li>@Html.ActionLink("Sales Per Item", "SalesChart", "Home")</li>
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Inventory", "Index", "Inventories")</li>
+                                    <li>@Html.ActionLink("Date Sales", "DateSales", "Home")</li>
+                                    <li>@Html.ActionLink("Sales Per Item", "SalesChart", "Home")</li>
+                                </ul>
                             }
                         </li>
 
