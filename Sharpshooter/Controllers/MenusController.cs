@@ -18,6 +18,12 @@ namespace Sharpshooter.Controllers
         public ActionResult Index()
         {
             return View(db.Menus.ToList());
+        } 
+
+        public ActionResult Menu()
+        {
+            var categories = db.Menus.ToList();
+            return View(categories);
         }
 
         public ActionResult ViewMenuAll()

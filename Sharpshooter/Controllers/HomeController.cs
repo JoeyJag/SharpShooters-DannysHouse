@@ -36,6 +36,7 @@ namespace Sharpshooter.Controllers
         {
 
             ApplicationDbContext context = new ApplicationDbContext();
+            
 
             var query = context.OrderDetails.Include("Orders")
                 .GroupBy(p => p.Order.OrderDate)

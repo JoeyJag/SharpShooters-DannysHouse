@@ -78,7 +78,7 @@ namespace Sharpshooter.Controllers
 
                 db.MenuItems.Add(menuItem);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Items", "Admin");
             }
 
             ViewBag.MenuID = new SelectList(db.Menus, "MenuID", "MenuTitle", menuItem.MenuID);
