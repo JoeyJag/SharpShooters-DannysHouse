@@ -36,10 +36,9 @@ namespace Sharpshooter.Controllers
         {
 
             ApplicationDbContext context = new ApplicationDbContext();
-            
 
             var query = context.OrderDetails.Include("Orders")
-                .GroupBy(p => p.Order.OrderDate)
+                .GroupBy(p => p.Order.OrderDate.ToString())
                 .Select(g => new { name = g.Key, count = g.Sum(w => w.OrderId) }).ToList();
             return Json(query, JsonRequestBehavior.AllowGet);
         }

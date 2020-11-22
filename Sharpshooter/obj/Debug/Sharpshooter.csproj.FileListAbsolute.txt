@@ -2108,12 +2108,11 @@ C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
 C:\Users\aksha\Desktop\Sharpshooter danny house latest\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
-F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\csc.exe.config
-F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\vbc.exe
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\Sharpshooter.dll.config
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\Sharpshooter.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\Sharpshooter.pdb
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\csc.exe
+F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\csc.exe.config
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\csc.rsp
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\csi.exe
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\csi.exe.config
@@ -2136,6 +2135,7 @@ F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharp
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\System.Security.Principal.Windows.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\System.Text.Encoding.CodePages.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\System.ValueTuple.dll
+F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\vbc.exe
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\vbc.exe.config
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\vbc.rsp
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\roslyn\VBCSCompiler.exe
@@ -2164,3 +2164,4 @@ F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharp
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
+F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
