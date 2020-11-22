@@ -5,7 +5,26 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>RESTAURANT REVIEWS</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">RESTAURANT REVIEWS</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br /><br />
+
+<h2 class="noo-sh-title">Restaurant Reviews</h2>
+
+<br />
 
 <p>
     @Html.ActionLink("Create New Review", "Create")
@@ -24,23 +43,24 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewOfRestraurant)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RestaurantReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.RestaurantReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RestaurantReviewID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewOfRestraurant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RestaurantReviewID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RestaurantReviewID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RestaurantReviewID })
+            </td>
+        </tr>
+    }
 
 </table>
