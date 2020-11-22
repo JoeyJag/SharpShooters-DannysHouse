@@ -137,10 +137,24 @@
 
         </div>*@
 
+                    <br /><br /><br />
+                    <h3>Pick your name and tick the box to choose this delivery</h3>
+
 
                     <div class="form-group">
+                        @Html.LabelFor(model => model.DeliveryGuy, htmlAttributes: new { @class = "control-label col-md-2" })
+                        &nbsp;&nbsp;
+                        @Html.DropDownList("DeliveryGuy", new List<SelectListItem>
+                        {
+                            new SelectListItem{ Text="John", Value = "John" },
+                            new SelectListItem{ Text="Bobby", Value = "Bobby" },
+                            new SelectListItem{ Text="Steve", Value = "Steve" },
+                        })
+                    </div>
 
 
+
+                    <div class="form-group">
                         <div class="checkbox">
                             @Html.LabelFor(model => model.DeliveryProcess, htmlAttributes: new { @class = "control-label col-md-2" })
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -157,7 +171,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Choose Delivery" class="btn btn-default" onclick="alert('Current Delivery has been chosen')" />
+                            <input type="submit" value="Take This Delivery" class="btn btn-default" onclick="alert('Current Delivery has been chosen')" />
 
                         </div>
 

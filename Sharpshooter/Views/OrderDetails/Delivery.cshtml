@@ -79,7 +79,8 @@
                     {
                         <tr>
                             <td>
-                                <p>@Html.DisplayNameFor(model => model.Order.OrderId): @Html.DisplayFor(modelItem => item.Order.OrderId)    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  @Html.DisplayNameFor(model => model.DeliveryStatus):  <b>@Html.DisplayFor(modelItem => item.CurrentDeliveryProcess)</b></p> <br />
+                                <p>@Html.DisplayNameFor(model => model.Order.OrderId): @Html.DisplayFor(modelItem => item.Order.OrderId)    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  @Html.DisplayNameFor(model => model.DeliveryStatus):  <b>@Html.DisplayFor(modelItem => item.CurrentDeliveryProcess)</b></p> 
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayNameFor(model => model.DeliveryGuy): <b>@Html.DisplayFor(modelItem => item.DeliveryGuy)</b></p><br />
 
                                 <p>@Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle): @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)  &nbsp;    |   &nbsp;   @Html.DisplayNameFor(model => model.Order.Username): @Html.DisplayFor(modelItem => item.Order.Username)</p>
 
@@ -87,9 +88,9 @@
 
                                 <p><b>@Html.DisplayNameFor(model => model.Order.Phone): @Html.DisplayFor(modelItem => item.Order.Phone)</b>   &nbsp;   |  &nbsp;    @Html.DisplayNameFor(model => model.Quantity): @Html.DisplayFor(modelItem => item.Quantity)</p>
 
-                                <p>@Html.DisplayNameFor(model => model.UnitPrice) (R): @Html.DisplayFor(modelItem => item.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@     <br />
+                                <p>@Html.DisplayNameFor(model => model.UnitPrice) (R): @Html.DisplayFor(modelItem => item.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@              <br />
 
-                                <p>| @Html.ActionLink("Completed", "DeliveryEdit", new { id = item.OrderDetailId }) |</p>
+                                <p>| @Html.ActionLink("View Delivery Details", "DeliveryEdit", new { id = item.OrderDetailId }) |</p>
 
 
 

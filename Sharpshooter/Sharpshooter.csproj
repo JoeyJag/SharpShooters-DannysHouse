@@ -260,13 +260,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011021535303_InitialModel.cs" />
-    <Compile Include="Migrations\202011021535303_InitialModel.Designer.cs">
-      <DependentUpon>202011021535303_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011031425477_InitialModel1.cs" />
-    <Compile Include="Migrations\202011031425477_InitialModel1.Designer.cs">
-      <DependentUpon>202011031425477_InitialModel1.cs</DependentUpon>
+    <Compile Include="Migrations\202011221433023_InitialModel.cs" />
+    <Compile Include="Migrations\202011221433023_InitialModel.Designer.cs">
+      <DependentUpon>202011221433023_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -283,10 +279,6 @@
     <Compile Include="Controllers\RestaurantReviewsController.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" />
     <Compile Include="PayPal\PDTHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -302,7 +294,12 @@
     <Content Include="AdminStyle\js\demo\datatables-demo.js" />
     <Content Include="AdminStyle\js\sb-admin.js" />
     <Content Include="AdminStyle\js\sb-admin.min.js" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap-reboot.min.css" />
     <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap.min.css" />
     <Content Include="AdminStyle\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="AdminStyle\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="AdminStyle\vendor\bootstrap\js\bootstrap.js" />
@@ -1329,7 +1326,6 @@
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="bin\Sharpshooter.dll.config" />
-    <Content Include="obj\Release\Sharpshooter.csprojAssemblyReference.cache" />
     <Content Include="AdminStyle\scss\sb-admin.scss" />
     <Content Include="AdminStyle\scss\_cards.scss" />
     <Content Include="AdminStyle\scss\_footer.scss" />
@@ -1339,6 +1335,8 @@
     <Content Include="AdminStyle\scss\_navbar.scss" />
     <Content Include="AdminStyle\scss\_utilities.scss" />
     <Content Include="AdminStyle\scss\_variables.scss" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="AdminStyle\vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="AdminStyle\vendor\bootstrap\js\bootstrap.bundle.js.map" />
     <Content Include="AdminStyle\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
     <Content Include="AdminStyle\vendor\bootstrap\js\bootstrap.js.map" />
@@ -1512,11 +1510,11 @@
     <Content Include="Views\RestaurantReviews\Edit.cshtml" />
     <Content Include="Views\RestaurantReviews\Index.cshtml" />
     <Content Include="Views\RestaurantReviews\ViewReview.cshtml" />
-    <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Dashboard.cshtml" />
     <Content Include="Views\Admin\Items.cshtml" />
-    <Content Include="Views\Admin\Menus.cshtml" />
     <Content Include="Views\Admin\MenuGroups.cshtml" />
+    <Content Include="Views\Admin\Menus.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -1535,11 +1533,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011021535303_InitialModel.resx">
-      <DependentUpon>202011021535303_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011031425477_InitialModel1.resx">
-      <DependentUpon>202011031425477_InitialModel1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011221433023_InitialModel.resx">
+      <DependentUpon>202011221433023_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

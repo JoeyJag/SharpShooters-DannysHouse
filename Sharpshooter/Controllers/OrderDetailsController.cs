@@ -94,7 +94,7 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
+        public ActionResult Create([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
@@ -132,7 +132,7 @@ namespace Sharpshooter.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeliveryProgress([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
+        public ActionResult DeliveryProgress([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
@@ -173,7 +173,7 @@ namespace Sharpshooter.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeliveryEdit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
+        public ActionResult DeliveryEdit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
@@ -215,7 +215,7 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice")] OrderDetail orderDetail)
+        public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
