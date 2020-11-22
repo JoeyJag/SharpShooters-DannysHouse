@@ -106,7 +106,18 @@ namespace Sharpshooter.Controllers
             var inventory = from s in db.Inventories
                             select s;
 
-            return View(inventory.Where(i => (i.Name.Equals("Fanta") && i.QuantityRemaining < 10) || (i.Name.Equals("Mutton") && i.QuantityRemaining < 30) || (i.Name.Equals("Beans") && i.QuantityRemaining < 40)));
+            return View(inventory.Where(i => (i.Name.Equals("Fanta") && i.QuantityRemaining < 10) ||
+            (i.Name.Equals("Mutton") && i.QuantityRemaining < 30) ||
+            (i.Name.Equals("Beans") && i.QuantityRemaining < 40) ||
+            (i.Name.Equals("Chicken") && i.QuantityRemaining < 30) ||
+            (i.Name.Equals("Creme soda") && i.QuantityRemaining < 10) ||
+             (i.Name.Equals("Bread") && i.QuantityRemaining < 13) ||
+            (i.Name.Equals("Carrots") && i.QuantityRemaining < 15) ||
+            (i.Name.Equals("Milk") && i.QuantityRemaining < 5) ||
+            (i.Name.Equals("Onion") && i.QuantityRemaining < 10) ||
+            (i.Name.Equals("Tomatoe") && i.QuantityRemaining < 15) ||
+            (i.Name.Equals("Potatoe") && i.QuantityRemaining < 15) ||
+            (i.Name.Equals("Roti") && i.QuantityRemaining < 20)));
         }
 
         // GET: Inventories/Details/5

@@ -13,6 +13,7 @@ namespace Sharpshooter.Models
         [ScaffoldColumn(false)]
         public int OrderId { get; set; }
         [ScaffoldColumn(false)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}")]
         public System.DateTime OrderDate { get; set; }
         [ScaffoldColumn(false)]
         public string Username { get; set; }
