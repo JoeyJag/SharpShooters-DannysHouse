@@ -40,7 +40,8 @@ namespace Sharpshooter.Models
         public DbSet<ShoppingCart> ShoppingCarts { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Review> Reviews { get; set; }
-   
+        public DbSet<Drivers> Drivers { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Sharpshooter.Models.Drivers>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverSurname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverVehicle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverIdNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverSurname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverVehicle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverIdNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DriverID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DriverID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DriverID })
+        </td>
+    </tr>
+}
+
+</table>

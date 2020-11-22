@@ -2158,10 +2158,8 @@ F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharp
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XPath.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XPath.XDocument.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
-F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel1.resources
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CoreCompileInputs.cache
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CopyComplete
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.dll
 F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.pdb
-F:\DUT\3rd year\AppDev 3A\Clone of Sharpshooters\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache

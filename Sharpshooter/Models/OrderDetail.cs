@@ -8,6 +8,8 @@ namespace Sharpshooter.Models
     public class OrderDetail
     {
         public int OrderDetailId { get; set; }
+
+        public string DriverID { get; set; }
         public int OrderId { get; set; }
         public int MenuItemID { get; set; }
         public int Quantity { get; set; }
@@ -19,6 +21,7 @@ namespace Sharpshooter.Models
         public string CurrentDeliveryProcess { get; set; }
         public string DeliveryGuy { get; set; }
 
+        public virtual Drivers Driver { get; set; }
         public virtual MenuItem MenuItem { get; set; }
         public virtual Order Order { get; set; }
 

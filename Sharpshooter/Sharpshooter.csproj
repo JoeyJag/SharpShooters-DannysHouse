@@ -246,6 +246,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminInventoriesController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
+    <Compile Include="Controllers\DriversController.cs" />
     <Compile Include="Controllers\EmployeeInventoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoriesController.cs" />
@@ -260,13 +261,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011221433023_InitialModel.cs" />
-    <Compile Include="Migrations\202011221433023_InitialModel.Designer.cs">
-      <DependentUpon>202011221433023_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202011221711560_InitialModel.cs" />
+    <Compile Include="Migrations\202011221711560_InitialModel.Designer.cs">
+      <DependentUpon>202011221711560_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Drivers.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -1515,6 +1517,11 @@
     <Content Include="Views\Admin\MenuGroups.cshtml" />
     <Content Include="Views\Admin\Menus.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Drivers\Create.cshtml" />
+    <Content Include="Views\Drivers\Delete.cshtml" />
+    <Content Include="Views\Drivers\Details.cshtml" />
+    <Content Include="Views\Drivers\Edit.cshtml" />
+    <Content Include="Views\Drivers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -1533,8 +1540,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011221433023_InitialModel.resx">
-      <DependentUpon>202011221433023_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011221711560_InitialModel.resx">
+      <DependentUpon>202011221711560_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
