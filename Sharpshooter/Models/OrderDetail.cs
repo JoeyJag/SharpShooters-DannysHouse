@@ -17,6 +17,7 @@ namespace Sharpshooter.Models
         public bool DeliveryStatus { get; set; }
         public bool DeliveryProcess { get; set; }
         public string CurrentDeliveryProcess { get; set; }
+        public string DeliveryGuy { get; set; }
 
         public virtual MenuItem MenuItem { get; set; }
         public virtual Order Order { get; set; }
