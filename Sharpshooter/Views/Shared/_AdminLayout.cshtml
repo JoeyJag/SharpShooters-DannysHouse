@@ -76,23 +76,106 @@
         <!-- Sidebar -->
         <ul class="sidebar navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="../Admin/Dashboard">
+                <a class="nav-link" href="../Home/Index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+                    <span>Home</span>
                 </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Tables</span>
+                    <span>Menu Tables</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                    <h6 class="dropdown-header">Tables Pages:</h6>
-                    <a class="dropdown-item" href="../Admin/Menus">Menu</a>
-                    <a class="dropdown-item" href="../Admin/MenuGroups">Menu Categories</a>
-                    <a class="dropdown-item" href="../Admin/Items">Items</a>
+                    <h6 class="dropdown-header">Menu Tables:</h6>
+                    <a class="dropdown-item" href="../Admin/Menus">Menus</a>
+                    <a class="dropdown-item" href="../Admin/MenuGroups">Menu Groups</a>
+                    <a class="dropdown-item" href="../Admin/Items">Menu Items</a>
                 </div>
             </li>
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Menu</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Menu:</h6>
+                    <a class="dropdown-item" href="../Menus/ViewMenuAll">Menus Page</a>
+                </div>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Current Orders</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Current Orders:</h6>
+                    <a class="dropdown-item" href="../OrderDetails/Index">Current Orders Page</a>
+                </div>
+            </li>
+
+
+
+            @*<li class="nav-item">
+            <a class="nav-link" href="../Menus/ViewMenuAll">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Menu</span>
+            </a>
+        </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="../OrderDetails/Index">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Current Orders</span>
+                </a>
+            </li>*@
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Deliveries</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Delivery Pages:</h6>
+                    <a class="dropdown-item" href="../OrderDetails/OpenDeliveries">Open Deliveries</a>
+                    <a class="dropdown-item" href="../OrderDetails/Delivery">Deliveries in Progress</a>
+                </div>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Food Reviews</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Food Review Pages:</h6>
+                    <a class="dropdown-item" href="../Reviews/ViewReview">Customer Food Review</a>
+                    <a class="dropdown-item" href="../Reviews/Index">Admin Food Review</a>
+                </div>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Restaurant Reviews</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Restaurant Review Pages:</h6>
+                    <a class="dropdown-item" href="../RestaurantReviews/ViewReview">Customer Review Page</a>
+                    <a class="dropdown-item" href="../RestaurantReviews/Index">Admin Review Page</a>
+                </div>
+            </li>
+
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
@@ -100,59 +183,71 @@
                     <span>Sales Charts</span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                    <h6 class="dropdown-header">Sales</h6>
+                    <h6 class="dropdown-header">Sales Charts:</h6>
                     <a class="dropdown-item" href="../Home/SalesChart">Total Sales of Items</a>
                     <a class="dropdown-item" href="../Home/DateSales">Total Sales per Day</a>
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Items</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Menu</span>
-                </a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Menu Categories</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Menu Categories</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown">
+                    <i class="fas fa-fw fa-folder"></i>
                     <span>Inventories</span>
                 </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Inventory Pages:</h6>
+                    <a class="dropdown-item" href="../EmployeeInventories/Index">Employee Inventory</a>
+                    <a class="dropdown-item" href="../AdminInventories/Index">Admin Inventory</a>
+                </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Charts</span>
-                </a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Order</span>
-                </a>
-            </li>
+
+
+
+
+            @*<li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Menu</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Menu Categories</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Menu Categories</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Inventories</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Charts</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="tables.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Order</span>
+            </a>
+        </li>*@
 
 
 

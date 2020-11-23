@@ -152,7 +152,7 @@
                                     @*<li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
                     <li>@Html.ActionLink("Open Deliveries", "OpenDeliveries", "OrderDetails")</li>
                     <li>@Html.ActionLink("Deliveries In Progress", "Delivery", "OrderDetails")</li>*@
-                                    <li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>
+                                    @*<li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>*@
                                     <li>@Html.ActionLink("Admin Panel", "Dashboard", "Admin")</li>
 
                                 </ul>
@@ -182,12 +182,13 @@
                         <li>
                             @if (User.IsInRole("Manager"))
                             {
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                    <li>@Html.ActionLink("Inventory", "Index", "Inventories")</li>
-                                    <li>@Html.ActionLink("Date Sales", "DateSales", "Home")</li>
-                                    <li>@Html.ActionLink("Sales Per Item", "SalesChart", "Home")</li>
-                                </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                <li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>
+                                <li>@Html.ActionLink("Date Sales", "DateSales", "Home")</li>
+                                <li>@Html.ActionLink("Sales Per Item", "SalesChart", "Home")</li>
+                                <li>@Html.ActionLink("Admin Panel", "Dashboard", "Admin")</li>
+                            </ul>
                             }
                         </li>
 
