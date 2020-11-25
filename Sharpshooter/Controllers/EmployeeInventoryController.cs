@@ -29,7 +29,7 @@ namespace Sharpshooter.Controllers
                     ViewBag.Success = "Success, Manager has been informed";
                     var senderEmail = new MailAddress("taslyn.moopanar@gmail.com", "Employee");
                     var receiverEmail = new MailAddress("tasmoop@gmail.com", "Receiver");
-                    var password = "B@dboy2968";
+                    var password = "T@slyn2968";
                     var sub = subject;
                     var body = message;
                     var smtp = new SmtpClient

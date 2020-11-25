@@ -20,6 +20,27 @@ namespace Sharpshooter.Controllers
             return View(db.Drivers.ToList());
         }
 
+        public ActionResult DeliveryUser()
+        {
+            var delivery = db.Drivers.ToList();
+            return View(delivery);
+        }
+
+        public ActionResult BrowseDelivery(string category)
+        {
+            var categoryModel = db.Drivers.Include("OrderDetails").Single(c => c.DriverName == category);
+            return View(categoryModel);
+
+        }
+
+        public ActionResult ViewOrder(int id)
+        {
+            OrderDetail orderDetail = new OrderDetail();
+            orderDetail = db.OrderDetails.Where(x => x.OrderId == id).FirstOrDefault();
+
+            return View(orderDetail);
+        }
+
         // GET: Drivers/Details/5
         public ActionResult Details(string id)
         {

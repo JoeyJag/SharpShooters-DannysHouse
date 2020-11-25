@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -22,5 +23,6 @@ namespace Sharpshooter.Models
         public InventoryItemType Type { get; set; }
         public int QuantityRemaining { get; set; }
         public decimal PricePerUnit { get; set; }
+
     }
 }

@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Sharpshooter.Models.Drivers>
+
+@{
+    ViewBag.Title = "DeliveryUser";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>DeliveryUser</h2>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    div {
+        text-align: center;
+        align-content: center;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid #ddd;
+    }
+
+    th, td {
+        text-align: center;
+        padding: 16px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<!-- Start All Title Box -->
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Delivery</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Delivery</a></li>
+                    <li class="breadcrumb-item active">Delivery</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End All Title Box -->
+
+
+<div class="about-box-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="noo-sh-title">Browse Drivers</h2>
+                <h4>
+                    Select from @Model.Count()
+                    genres:
+                </h4>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@foreach (var category in Model)
+{
+    <div style="margin: auto" class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="margin:auto">
+            <div class="shop-cat-box">
+                <li class="btn hvr-hover" style="width:100%">@Html.ActionLink(category.DriverName, "BrowseDelivery", new { category = category.DriverName })" @category.DriverName</li>
+            </div>
+        </div>
+    </div>
+}
+

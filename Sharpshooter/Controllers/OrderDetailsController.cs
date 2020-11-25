@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
@@ -47,7 +48,6 @@ namespace Sharpshooter.Controllers
 
             return View(DeliProg.Where(x => x.DeliveryProcess == true).ToList());
         }
-
 
 
         public ActionResult OpenDeliveries()
@@ -124,6 +124,7 @@ namespace Sharpshooter.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);
@@ -132,7 +133,7 @@ namespace Sharpshooter.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeliveryProgress([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
+        public ActionResult DeliveryProgress([Bind(Include = "OrderDetailId,OrderId,MenuItemID,DriverID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
@@ -142,6 +143,7 @@ namespace Sharpshooter.Controllers
                 db.SaveChanges();
                 return RedirectToAction("OpenDeliveries");
             }
+            ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);
@@ -165,6 +167,7 @@ namespace Sharpshooter.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);
@@ -173,7 +176,7 @@ namespace Sharpshooter.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeliveryEdit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
+        public ActionResult DeliveryEdit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,DriverID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
@@ -183,6 +186,7 @@ namespace Sharpshooter.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Delivery");
             }
+            ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);
@@ -205,6 +209,7 @@ namespace Sharpshooter.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);
@@ -215,7 +220,7 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
+        public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,MenuItemID,DriverID,OrderStatus,DeliveryStatus,DeliveryProcess,CurrentDeliveryProcess,Quantity,UnitPrice,DeliveryGuy")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
             {
@@ -226,7 +231,7 @@ namespace Sharpshooter.Controllers
                 return RedirectToAction("Index");
             }
 
-
+            ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);
             ViewBag.OrderId = new SelectList(db.Orders, "OrderId", "Username", orderDetail.OrderId);
             return View(orderDetail);

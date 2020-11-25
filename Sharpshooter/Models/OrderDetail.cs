@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,7 @@ namespace Sharpshooter.Models
     public class OrderDetail
     {
         public int OrderDetailId { get; set; }
-
+        [ForeignKey("Driver")]
         public string DriverID { get; set; }
         public int OrderId { get; set; }
         public int MenuItemID { get; set; }

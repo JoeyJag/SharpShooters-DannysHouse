@@ -21,5 +21,7 @@ namespace Sharpshooter.Models
         public string DriverVehicle { get; set; }
         [Display(Name ="Id Number:")]
         public string DriverIdNo { get; set; }
+
+        public virtual List<OrderDetail> OrderDetails { get; set; }
     }
 }

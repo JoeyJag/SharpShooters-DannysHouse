@@ -51,5 +51,6 @@ namespace Sharpshooter.Models
 
         [Display(Name ="Cost Of Menu Item")]
         public decimal MenuItemCost { get; set; }
+
     }
 }

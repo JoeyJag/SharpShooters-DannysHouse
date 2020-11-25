@@ -1,0 +1,54 @@
+﻿@model Sharpshooter.Models.Drivers
+
+@{
+    ViewBag.Title = "BrowseDelivery";
+    Layout = "~/Views/Shared/TempLayout.cshtml";
+}
+
+<h2>BrowseDelivery</h2>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    div {
+        text-align: center;
+        align-content: center;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .button {
+        background-color: #f44336; /* Red */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+<div> <h3 style="margin:auto"><em>@Model.DriverName</em> Orders</h3></div>
+<div>
+    <ul style="margin:auto">
+        @foreach (var item in Model.OrderDetails)
+        {
+            <li class="button" >
+                <p class="fa fa-map-pin">&bull; &nbsp; @Html.ActionLink(item.Order.Address, "ViewOrder", new { id = item.OrderId })</p>
+            </li>
+            <br />
+
+        }
+    </ul>
+</div>
+
+
+
+<br /><br /><br /><br />
+<br /><br /><br /><br />
+<br /><br /><br /><br />

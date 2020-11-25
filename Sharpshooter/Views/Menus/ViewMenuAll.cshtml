@@ -90,13 +90,12 @@
 
 @foreach (var category in Model)
 {
-        <div style="margin-left: 100px" class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="@category.MenuImg" alt="" width="100" height="50" />
-                    <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })"@category.MenuTitle</li>
-                </div>
+    <div style="margin-left: 100px" class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="shop-cat-box">
+                <img class="img-fluid" src="@category.MenuImg" alt="" width="100" height="50" />
+                <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })"@category.MenuTitle</li>
             </div>
         </div>
+    </div>
 }
-

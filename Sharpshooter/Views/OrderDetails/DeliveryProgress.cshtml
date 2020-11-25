@@ -142,14 +142,11 @@
 
 
                     <div class="form-group">
-                        @Html.LabelFor(model => model.DeliveryGuy, htmlAttributes: new { @class = "control-label col-md-2" })
-                        &nbsp;&nbsp;
-                        @Html.DropDownList("DeliveryGuy", new List<SelectListItem>
-                        {
-                            new SelectListItem{ Text="John", Value = "John" },
-                            new SelectListItem{ Text="Bobby", Value = "Bobby" },
-                            new SelectListItem{ Text="Steve", Value = "Steve" },
-                        })
+                        @Html.LabelFor(model => model.DriverID, "DriverID", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownList("DriverID", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DriverID, "", new { @class = "text-danger" })
+                        </div>
                     </div>
 
 
