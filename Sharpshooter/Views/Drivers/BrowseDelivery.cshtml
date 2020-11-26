@@ -59,7 +59,7 @@
         @foreach (var item in Model.OrderDetails)
         {
             <li class="button" >
-                <p class="fa fa-map-pin">&bull; &nbsp; @Html.ActionLink(item.Order.Address, "ViewOrder", new { id = item.OrderId })</p>
+                <p class="fa fa-map-pin">&bull; &nbsp; @Html.ActionLink(item.Order.Address, "ViewOrder", new { id = item.OrderDetailId })</p>
             </li>
             <br />
 
