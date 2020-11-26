@@ -184,7 +184,7 @@ namespace Sharpshooter.Controllers
 
                 db.Entry(orderDetail).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Delivery");
+                return RedirectToAction("DeliveryUser", "Drivers");
             }
             ViewBag.DriverID = new SelectList(db.Drivers, "DriverID", "DriverName", orderDetail.DriverID);
             ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemTitle", orderDetail.MenuItemID);

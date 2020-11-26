@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>ViewOrder</h2>
 <style>
     table{
         align-content:center;
@@ -24,7 +23,7 @@
             <div class="col-lg-12">
                 <h2>DELIVERIES IN PROGRESS</h2>
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Delivery</a></li>
                     <li class="breadcrumb-item active">DELIVERIES IN PROGRESS</li>
                 </ul>
             </div>
@@ -32,9 +31,7 @@
     </div>
 </div>
 <!-- End All Title Box -->
-@*<p>
-        @Html.ActionLink("Create New", "Create")
-    </p>*@
+
 
 
 
@@ -55,67 +52,72 @@
                 <br />
                 <table class="table-bordered">
                     @*<tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Order.OrderId)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Order.Username)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Order.Address)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Order.City)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Order.Phone)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Quantity)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.UnitPrice)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.OrderStatus)
-                            </th>
-                            <th></th>
-                        </tr>*@
-
-                   
-                        <tr>
-                            <td>
-                                <p>@Html.DisplayNameFor(model => model.Order.OrderId): @Html.DisplayFor(modelItem => Model.Order.OrderId)    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  @Html.DisplayNameFor(model => model.DeliveryStatus):  <b>@Html.DisplayFor(modelItem => Model.CurrentDeliveryProcess)</b></p>
-                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayNameFor(model => model.Driver.DriverName): <b>@Html.DisplayFor(modelItem => Model.Driver.DriverName)</b></p><br />
-
-                                <p>@Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle): @Html.DisplayFor(modelItem => Model.MenuItem.MenuItemTitle)  &nbsp;    |   &nbsp;   @Html.DisplayNameFor(model => model.Order.Username): @Html.DisplayFor(modelItem => Model.Order.Username)</p>
-
-                                <p><b>@Html.DisplayNameFor(model => model.Order.Address): @Html.DisplayFor(modelItem => Model.Order.Address)</b>   &nbsp;   |  &nbsp;    <b>@Html.DisplayNameFor(model => model.Order.City): @Html.DisplayFor(modelItem => Model.Order.City)</b></p>
-
-                                <p><b>@Html.DisplayNameFor(model => model.Order.Phone): @Html.DisplayFor(modelItem => Model.Order.Phone)</b>   &nbsp;   |  &nbsp;    @Html.DisplayNameFor(model => model.Quantity): @Html.DisplayFor(modelItem => Model.Quantity)</p>
-
-                                <p>@Html.DisplayNameFor(model => model.UnitPrice) (R): @Html.DisplayFor(modelItem => Model.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@              <br />
-
-                                <p>| @Html.ActionLink("View Delivery Details", "DeliveryEdit", "OrderDetails", new { id = Model.OrderDetailId }) |</p>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order.OrderId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order.Username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order.Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderStatus)
+                </th>
+                <th></th>
+            </tr>*@
 
 
+                    <tr>
+                        <td>
+                            <p>@Html.DisplayNameFor(model => model.Order.OrderId): @Html.DisplayFor(modelItem => Model.Order.OrderId)    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  @Html.DisplayNameFor(model => model.DeliveryStatus):  <b>@Html.DisplayFor(modelItem => Model.CurrentDeliveryProcess)</b></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @Html.DisplayNameFor(model => model.Driver.DriverName): <b>@Html.DisplayFor(modelItem => Model.Driver.DriverName)</b></p><br />
+
+                            <p>@Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle): @Html.DisplayFor(modelItem => Model.MenuItem.MenuItemTitle)  &nbsp;    |   &nbsp;   @Html.DisplayNameFor(model => model.Order.Username): @Html.DisplayFor(modelItem => Model.Order.Username)</p>
+
+                            <p><b>@Html.DisplayNameFor(model => model.Order.Address): @Html.DisplayFor(modelItem => Model.Order.Address)</b>   &nbsp;   |  &nbsp;    <b>@Html.DisplayNameFor(model => model.Order.City): @Html.DisplayFor(modelItem => Model.Order.City)</b></p>
+
+                            <p><b>@Html.DisplayNameFor(model => model.Order.Phone): @Html.DisplayFor(modelItem => Model.Order.Phone)</b>   &nbsp;   |  &nbsp;    @Html.DisplayNameFor(model => model.Quantity): @Html.DisplayFor(modelItem => Model.Quantity)</p>
+
+                            <p>@Html.DisplayNameFor(model => model.UnitPrice) (R): @Html.DisplayFor(modelItem => Model.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@              <br />
+
+                            <p>| @Html.ActionLink("View Delivery Details", "DeliveryEdit", "OrderDetails", new { id = Model.OrderDetailId },null) |</p>
 
 
 
 
-                            </td>
 
-                        </tr>
-                    
+
+                        </td>
+
+                    </tr>
+
 
                 </table>
-
+                <br /><br />
 
             </div>
 
         </div>
+        
+
+    </div>
+    <div>
+        @Html.ActionLink("Back to all Drivers page", "DeliveryUser")
     </div>
 </div>

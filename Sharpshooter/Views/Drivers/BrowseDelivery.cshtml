@@ -5,7 +5,26 @@
     Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 
-<h2>BrowseDelivery</h2>
+
+<div class="all-title-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>DELIVERY ADDRESSES</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">DELIVERY</a></li>
+                    <li class="breadcrumb-item active">DELIVERY ADDRESSES</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<h2 class="noo-sh-title">DELIVERY ADDRESSES</h2>*@
+
+
+<br /><br />
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -33,7 +52,8 @@
         border-radius: 4px;
     }
 </style>
-<div> <h3 style="margin:auto"><em>@Model.DriverName</em> Orders</h3></div>
+
+<div> <h3 style="margin:auto" class="noo-sh-title"><em>@Model.DriverName</em>'s Orders:</h3></div>
 <div>
     <ul style="margin:auto">
         @foreach (var item in Model.OrderDetails)
@@ -47,8 +67,11 @@
     </ul>
 </div>
 
+<br /><br />
 
+<div>
+    @Html.ActionLink("Back to all Drivers page", "DeliveryUser")
+</div>
 
-<br /><br /><br /><br />
 <br /><br /><br /><br />
 <br /><br /><br /><br />
