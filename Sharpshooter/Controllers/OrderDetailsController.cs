@@ -15,7 +15,11 @@ namespace Sharpshooter.Controllers
     public class OrderDetailsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        
+        public ActionResult MapPage()
+        {
+            return View();
+        }
 
         public ActionResult ListPage()
         {
