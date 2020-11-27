@@ -261,9 +261,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011261759012_InitialModel.cs" />
-    <Compile Include="Migrations\202011261759012_InitialModel.Designer.cs">
-      <DependentUpon>202011261759012_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202011270853446_InitialModel.cs" />
+    <Compile Include="Migrations\202011270853446_InitialModel.Designer.cs">
+      <DependentUpon>202011270853446_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1468,7 +1468,6 @@
     <Content Include="Views\PayPal\Index.cshtml" />
     <Content Include="Views\PayPal\Success.cshtml" />
     <Content Include="Views\PayPal\DetailsOrder.cshtml" />
-    <Content Include="Views\Checkout\PayAtStore.cshtml" />
     <Content Include="Views\OrderDetails\Delivery.cshtml" />
     <Content Include="Views\OrderDetails\DeliveryEdit.cshtml" />
     <Content Include="Views\OrderDetails\ListPage.cshtml" />
@@ -1525,6 +1524,7 @@
     <Content Include="Views\Drivers\DeliveryUser.cshtml" />
     <Content Include="Views\Drivers\BrowseDelivery.cshtml" />
     <Content Include="Views\Drivers\ViewOrder.cshtml" />
+    <Content Include="Views\Admin\DriverIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -1543,8 +1543,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011261759012_InitialModel.resx">
-      <DependentUpon>202011261759012_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011270853446_InitialModel.resx">
+      <DependentUpon>202011270853446_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

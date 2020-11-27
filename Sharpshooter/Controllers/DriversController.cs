@@ -36,7 +36,7 @@ namespace Sharpshooter.Controllers
         public ActionResult ViewOrder(int id)
         {
             OrderDetail orderDetail = new OrderDetail();
-            orderDetail = db.OrderDetails.Where(x => x.OrderId == id).FirstOrDefault();
+            orderDetail = db.OrderDetails.Where(x => x.OrderDetailId == id).FirstOrDefault();
 
             return View(orderDetail);
         }

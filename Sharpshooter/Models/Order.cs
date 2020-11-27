@@ -49,6 +49,8 @@ namespace Sharpshooter.Models
         public string Email { get; set; }
         [ScaffoldColumn(false)]
         public decimal Total { get; set; }
+
+        public bool PayAtStore { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
 
 
