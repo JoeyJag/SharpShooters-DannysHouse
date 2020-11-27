@@ -33,9 +33,12 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     @Scripts.Render("~/bundles/jquery")
- 
-    </head>
+
+</head>
 
 <body>
 
@@ -132,6 +135,7 @@
                         <li>@Html.ActionLink("Menu", "ViewMenuAll", "Menus")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Store Locator", "MapPage", "OrderDetails")</li>
                         <li>@Html.ActionLink("Food Reviews", "ViewReview", "Reviews")</li>
                         <li>@Html.ActionLink("Restaurant Reviews", "ViewReview", "RestaurantReviews")</li>
                         @*<li>@Html.ActionLink("Current Deliveries", "Delivery", "OrderDetails")</li>*@
@@ -169,26 +173,26 @@
                             }
                         </li>
 
-                       <li>
+                        <li>
                             @if (User.IsInRole("Customer"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Write a Review for Food", "Create", "Reviews")</li>
-                                <li>@Html.ActionLink("Write a Review for Restaurant", "Create", "RestaurantReviews")</li>
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Write a Review for Food", "Create", "Reviews")</li>
+                                    <li>@Html.ActionLink("Write a Review for Restaurant", "Create", "RestaurantReviews")</li>
+                                </ul>
                             }
                         </li>
 
                         <li>
                             @if (User.IsInRole("Manager"))
                             {
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
-                                <li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>
-                                <li>@Html.ActionLink("Date Sales", "DateSales", "Home")</li>
-                                <li>@Html.ActionLink("Sales Per Item", "SalesChart", "Home")</li>
-                                <li>@Html.ActionLink("Admin Panel", "Dashboard", "Admin")</li>
-                            </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>@Html.ActionLink("Current Orders", "Index", "OrderDetails")</li>
+                                    <li>@Html.ActionLink("Inventory", "Index", "AdminInventories")</li>
+                                    <li>@Html.ActionLink("Date Sales", "DateSales", "Home")</li>
+                                    <li>@Html.ActionLink("Sales Per Item", "SalesChart", "Home")</li>
+                                    <li>@Html.ActionLink("Admin Panel", "Dashboard", "Admin")</li>
+                                </ul>
                             }
                         </li>
 
@@ -750,10 +754,10 @@
                                     <p><i class="fas fa-map-marker-alt"></i>Address: Gopalall Hurbans Rd <br>Tongaat, Durban<br>4399 </p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-phone-square"></i>Phone: <a href="#">+27 81 123 5678</a></p>
+                                    <p><i class="fa fa-phone-square"></i>Phone: <a href="#">+27 81 123 5678</a></p>
                                 </li>
                                 <li>
-                                    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:dannyshouse@gmail.com">dannyshouse@gmail.com</a></p>
+                                    <p><i class="fa fa-envelope"></i>Email: <a href="mailto:dannyshouse@gmail.com">dannyshouse@gmail.com</a></p>
                                 </li>
                             </ul>
                         </div>

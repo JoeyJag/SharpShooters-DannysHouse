@@ -10,26 +10,28 @@
         align-content: center;
     }
 
-    img{
+    img {
         border-radius: 10px;
     }
 </style>
-<div> <h3 style="margin:auto"><em>@Model.MenuTitle</em> Menu</h3></div>
+<div> <h2 style="margin:auto"><em>@Model.MenuTitle</em></h2></div>
 <div>
     <ul style="margin:auto">
         @foreach (var item in Model.MenuItems)
         {
-                <li>
-                    <p><img src="@Url.Content(item.MenuItemImg)" alt="" width="400" height="300" /></p>
-                    <p>&bull; &nbsp; @Html.ActionLink(item.MenuItemTitle, "ViewItems", new { id = item.MenuItemID })</p>
-                </li>
-                <br />
-            
+        <div>
+            <li>
+                <h3>@item.MenuItemTitle</h3>
+                <a href="@Url.Action("ViewItems", new { id = item.MenuItemID})">
+                    <img border="0" alt="" src="@Url.Content(item.MenuItemImg)" width="400" height="300">
+                </a>
+            </li>
+        </div>
+        <br />
+
         }
     </ul>
 </div>
-
-
 
 <br /><br /><br /><br />
 <br /><br /><br /><br />

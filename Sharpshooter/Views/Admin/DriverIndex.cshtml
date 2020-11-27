@@ -1,0 +1,118 @@
+﻿@model IEnumerable<Sharpshooter.Models.Drivers>
+
+@{
+    ViewBag.Title = "DriverIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>DriverIndex</h2>
+
+<div class="container-fluid">
+    <!-- Breadcrumbs-->
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Categories</li>
+
+    </ol>
+    <!-- DataTables Example -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="fas fa-table"></i>
+            Category Details
+            <a href="../MenuItems/Create" class="btn btn-info pull-right fa fa-plus">Add New</a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Driver Name</th>
+                            <th>Driver Surname</th>
+                            <th>Driver Vehicle</th>
+                            <th>Driver Id Number</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Driver Name</th>
+                            <th>Driver Surname</th>
+                            <th>Driver Vehicle</th>
+                            <th>Driver Id Number</th>
+                            <th>Action</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>@item.DriverName</td>
+                                <td>@item.DriverSurname</td>
+                                <td>@item.DriverVehicle</td>
+                                <td>@item.DriverID</td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", "Driver", new { id = item.DriverID }, "")
+                                    @Html.ActionLink("Delete", "Delete", "Driver", new { id = item.DriverID }, "")
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverSurname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverVehicle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverIdNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverSurname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverVehicle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverIdNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DriverID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DriverID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DriverID })
+        </td>
+    </tr>
+}
+
+</table>*@

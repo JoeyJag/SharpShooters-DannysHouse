@@ -40,11 +40,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="noo-sh-title">Deliveries In Progress</h2>
+                <h2 class="noo-sh-title">Deliveries In Progress   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a onclick="window.open('https://www.google.co.za/maps')" class="btn btn-outline-primary">Go to Maps</a></h2>
+
+                
 
 
-
-
+                @*<a href="https://www.google.co.za/maps">Go to Maps</a>*@
 
 
 
@@ -96,7 +97,7 @@
 
                             <p>@Html.DisplayNameFor(model => model.UnitPrice) (R): @Html.DisplayFor(modelItem => Model.UnitPrice)</p>   @*&nbsp;   |  &nbsp;*@              <br />
 
-                            <p>| @Html.ActionLink("View Delivery Details", "DeliveryEdit", "OrderDetails", new { id = Model.OrderDetailId },null) |</p>
+                            <p>| @Html.ActionLink("View Delivery Details", "DeliveryEdit", "OrderDetails", new { id = Model.OrderDetailId }, null) |</p>
 
 
 

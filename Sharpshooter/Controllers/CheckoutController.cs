@@ -107,5 +107,37 @@ namespace Sharpshooter.Controllers
             return View();
         }
 
+
+
+        [HttpPost]
+        public ActionResult PayAtStore(FormCollection values)
+        {
+            var order = new Order();
+            TryUpdateModel(order);
+
+            try
+            {
+
+                order.Username = User.Identity.Name;
+                order.OrderDate = DateTime.Now;
+
+
+                db.Orders.Add(order);
+                db.SaveChanges();
+
+                var cart = ShoppingCart.GetCart(this.HttpContext);
+                cart.CreateOrder(order);
+
+                return RedirectToAction("Complete",
+                    new { id = order.OrderId });
+
+            }
+            catch
+            {
+
+                return View(order);
+            }
+        }
+
     }
     }

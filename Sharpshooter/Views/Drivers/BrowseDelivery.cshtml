@@ -51,15 +51,30 @@
         cursor: pointer;
         border-radius: 4px;
     }
+    .button1 {
+        background-color: white; /* White */
+        border: 2px solid #555555;
+        color: black;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
 </style>
 
 <div> <h3 style="margin:auto" class="noo-sh-title"><em>@Model.DriverName</em>'s Orders:</h3></div>
+
 <div>
     <ul style="margin:auto">
         @foreach (var item in Model.OrderDetails)
         {
             <li class="button" >
-                <p class="fa fa-map-pin">&bull; &nbsp; @Html.ActionLink(item.Order.Address, "ViewOrder", new { id = item.OrderDetailId })</p>
+                <p class="fas fa-map-marker-alt">&bull; &nbsp; @Html.ActionLink(item.Order.Address, "ViewOrder", new { id = item.OrderDetailId })</p>
             </li>
             <br />
 
@@ -68,7 +83,9 @@
 </div>
 
 <br /><br />
-
+<br />
+      <div><a href="@Url.Action("OpenDeliveries", "OrderDetails")" class="button1">Open Deliveries</a></div>
+<br />
 <div>
     @Html.ActionLink("Back to all Drivers page", "DeliveryUser")
 </div>
