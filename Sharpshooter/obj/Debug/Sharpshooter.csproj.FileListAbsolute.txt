@@ -1964,6 +1964,7 @@ C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XmlDocument.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XPath.dll
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\bin\System.Xml.XPath.XDocument.dll
+C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csprojAssemblyReference.cache
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.Migrations.InitialModel.resources
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.GenerateResource.cache
 C:\Users\Joey Jag\Desktop\SharpShooters-DannysHouse\Sharpshooter\obj\Debug\Sharpshooter.csproj.CoreCompileInputs.cache
