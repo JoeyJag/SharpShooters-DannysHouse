@@ -261,9 +261,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202011271327163_InitialModel.cs" />
-    <Compile Include="Migrations\202011271327163_InitialModel.Designer.cs">
-      <DependentUpon>202011271327163_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\202011271652500_InitialModel.cs" />
+    <Compile Include="Migrations\202011271652500_InitialModel.Designer.cs">
+      <DependentUpon>202011271652500_InitialModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -1526,6 +1526,7 @@
     <Content Include="Views\Drivers\ViewOrder.cshtml" />
     <Content Include="Views\Admin\DriverIndex.cshtml" />
     <Content Include="Views\Checkout\PayAtStore.cshtml" />
+    <Content Include="Views\OrderDetails\MapPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\fonts\" />
@@ -1544,8 +1545,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011271327163_InitialModel.resx">
-      <DependentUpon>202011271327163_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011271652500_InitialModel.resx">
+      <DependentUpon>202011271652500_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
