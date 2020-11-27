@@ -156,5 +156,28 @@ namespace Sharpshooter.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult MenuReview(int? id)
+        {
+            Review review = new Review();
+            review = db.Reviews.Where(x => x.MenuItemID == id).FirstOrDefault();
+            return PartialView("MenuReview", db.Reviews.Where(x => x.MenuItemID == id).ToList());
+        }
+        public ActionResult CalcAvg(int? id)
+        {
+            int num = 0;
+            float Average = 0;
+            Review review = new Review();
+            review = db.Reviews.Where(x => x.MenuItemID == id).FirstOrDefault();
+            foreach (var i in db.Reviews.Where(x => x.MenuItemID == id).ToList())
+            {
+                Average = (Average + review.Rating);
+                num = num + 1;
+            }
+            Average = Average / num;
+
+            return View(Average);
+
+        }
     }
 }
