@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<Sharpshooter.Models.Menu>
 
 @{
-    /**/
+                /**/
 
-    ViewBag.Title = "ViewMenuAll";
-    Layout = "~/Views/Shared/TempLayout.cshtml";
+                /**/
+
+                ViewBag.Title = "ViewMenuAll";
+                Layout = "~/Views/Shared/TempLayout.cshtml";
 }
 <style>
     div {
@@ -90,11 +92,39 @@
 
 @foreach (var category in Model)
 {
-    <div style="margin-left: 100px" class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="shop-cat-box">
-                <img class="img-fluid" src="@category.MenuImg" alt="" width="100" height="50" />
-                <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })"@category.MenuTitle</li>
+    @*<div style="margin-left: 100px" class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="@category.MenuImg" alt="" width="100" height="50" />
+                    <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })"@category.MenuTitle</li>
+                </div>
+            </div>
+        </div>*@
+
+    <div class="list-view-box">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+                        <div class="type-lb">
+                            <p class="sale">Sale</p>
+                        </div>
+                        <img src="@category.MenuImg" class="img-fluid" alt="" width="300" height="150">
+                        <div class="mask-icon">
+                            <ul>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                <div class="why-text full-width">
+                    <h4>@category.MenuDescription</h4>
+                    <p>
+                        <li class="btn hvr-hover">@Html.ActionLink(category.MenuTitle, "Browse", new { category = category.MenuTitle })</li>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

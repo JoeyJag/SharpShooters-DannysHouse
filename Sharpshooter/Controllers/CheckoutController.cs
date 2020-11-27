@@ -102,10 +102,5 @@ namespace Sharpshooter.Controllers
                 }
             }
 
-        public ActionResult PayAtStore()
-        {
-            return View();
-        }
-
     }
     }

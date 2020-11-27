@@ -35,5 +35,10 @@ namespace Sharpshooter.Controllers
             var menuGroups = db.MenuGroups.Include(m => m.Menu);
             return View(menuGroups.ToList());
         }
+
+        public ActionResult DriverIndex()
+        {
+            return View(db.Drivers.ToList());
+        }
     }
 }
