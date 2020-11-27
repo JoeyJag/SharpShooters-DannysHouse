@@ -22,6 +22,7 @@ namespace Sharpshooter.Controllers
             return View(menuItems.ToList());
         }
 
+
         public ActionResult ViewMenuItems()
         {
             var menuItems = db.MenuItems.Include(m => m.Menu).Include(m => m.MenuGroup);
@@ -163,5 +164,9 @@ namespace Sharpshooter.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+
+
     }
 }

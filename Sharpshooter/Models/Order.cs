@@ -48,6 +48,8 @@ namespace Sharpshooter.Models
         public List<OrderDetail> OrderDetails { get; set; }
 
 
+
+
         public string ToString(Order order)
         {
             StringBuilder bob = new StringBuilder();

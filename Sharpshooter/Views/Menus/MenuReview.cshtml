@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Sharpshooter.Models.Review>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuItem.MenuItemTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReviewOfItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr class="w3-light-grey w3-hover-red">
+            <td>
+                @Html.DisplayFor(modelItem => item.MenuItem.MenuItemTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewOfItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+        </tr>
+
+    }
+
+</table>

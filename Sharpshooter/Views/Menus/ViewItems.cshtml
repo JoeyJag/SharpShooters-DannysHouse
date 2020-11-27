@@ -27,7 +27,7 @@
 
 <body>
 
-   
+
     <!-- Start Shop Detail  -->
     <div class="shop-detail-box-main">
         <div class="container">
@@ -122,114 +122,129 @@
                 </div>
             </div>
 
-            <div class="row my-5">
-                <div class="col-lg-12">
-                    <div class="title-all text-center">
-                        <h1>Featured Products</h1>
-                        <p>All of Our Tasty Menus to look at !!!</p>
-                    </div>
-                    <div class="featured-products-box owl-carousel owl-theme">
-                        <div class="item">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <img src="~/Content/ItemImages/Breyani.jpg" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                        </ul>
-                                        <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+            <br />
+            <br />
+
+            <div class="add-to-btn">
+                <div class="add-comp">
+                    <a class="btn hvr-hover" href=@Url.Action("Create","Reviews")><i class="fas fa-star"></i> Add Review</a>
+                </div>
+
+
+
+                <div class="cell">
+                    @{ Html.RenderAction("MenuReview");}
+                </div>
+
+
+                <div class="row my-5">
+                    <div class="col-lg-12">
+                        <div class="title-all text-center">
+                            <h1>Featured Products</h1>
+                            <p>All of Our Tasty Menus to look at !!!</p>
+                        </div>
+                        <div class="featured-products-box owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <img src="~/Content/ItemImages/Breyani.jpg" class="img-fluid" alt="Image">
+                                        <div class="mask-icon">
+                                            <ul>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                            <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="why-text">
-                                    <h4>Breyani</h4>
-                                    <h5> Give it a Try</h5>
+                                    <div class="why-text">
+                                        <h4>Breyani</h4>
+                                        <h5> Give it a Try</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <img src="~/Content/ItemImages/Chicken Curry and Rice.jpg" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                        </ul>
-                                        <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                            <div class="item">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <img src="~/Content/ItemImages/Chicken Curry and Rice.jpg" class="img-fluid" alt="Image">
+                                        <div class="mask-icon">
+                                            <ul>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                            <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="why-text">
-                                    <h4>Curries</h4>
-                                    <h5> Give it a Try</h5>
+                                    <div class="why-text">
+                                        <h4>Curries</h4>
+                                        <h5> Give it a Try</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <img src="~/Content/ItemImages/Double Cheeseburger.jpg" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                        </ul>
-                                        <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                            <div class="item">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <img src="~/Content/ItemImages/Double Cheeseburger.jpg" class="img-fluid" alt="Image">
+                                        <div class="mask-icon">
+                                            <ul>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                            <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="why-text">
-                                    <h4>Burgers</h4>
-                                    <h5> Give it a Try</h5>
+                                    <div class="why-text">
+                                        <h4>Burgers</h4>
+                                        <h5> Give it a Try</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <img src="~/Content/ItemImages/Samoosa.jpg" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                        </ul>
-                                        <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                            <div class="item">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <img src="~/Content/ItemImages/Samoosa.jpg" class="img-fluid" alt="Image">
+                                        <div class="mask-icon">
+                                            <ul>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                            <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="why-text">
-                                    <h4>Starters</h4>
-                                    <h5> Give it a Try</h5>
+                                    <div class="why-text">
+                                        <h4>Starters</h4>
+                                        <h5> Give it a Try</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="products-single fix">
-                                <div class="box-img-hover">
-                                    <img src="~/Content/ItemImages/Mutton Bunny Chow.jpg" class="img-fluid" alt="Image">
-                                    <div class="mask-icon">
-                                        <ul>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
-                                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                        </ul>
-                                        <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                            <div class="item">
+                                <div class="products-single fix">
+                                    <div class="box-img-hover">
+                                        <img src="~/Content/ItemImages/Mutton Bunny Chow.jpg" class="img-fluid" alt="Image">
+                                        <div class="mask-icon">
+                                            <ul>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                            <a class="cart" href="@Url.Action("ViewMenuAll", "Menus")">View</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="why-text">
-                                    <h4>Bunnies</h4>
-                                    <h5> Give it a Try</h5>
+                                    <div class="why-text">
+                                        <h4>Bunnies</h4>
+                                        <h5> Give it a Try</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
     <!-- End Cart -->
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
