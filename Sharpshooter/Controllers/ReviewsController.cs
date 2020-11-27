@@ -55,10 +55,13 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ReviewId,MenuItemID,UserName,ReviewOfItem,Rating")] Review review)
+        public ActionResult Create([Bind(Include = "ReviewId,MenuItemID,UserName,ReviewOfItem,Rating,StarRating")] Review review)
         {
             if (ModelState.IsValid)
             {
+
+                review.Rating = review.GetRatingNumb();
+
                 db.Reviews.Add(review);
                 db.SaveChanges();
                 return RedirectToAction("ViewReview");
@@ -89,10 +92,13 @@ namespace Sharpshooter.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ReviewId,MenuItemID,UserName,ReviewOfItem,Rating")] Review review)
+        public ActionResult Edit([Bind(Include = "ReviewId,MenuItemID,UserName,ReviewOfItem,Rating,StarRating")] Review review)
         {
             if (ModelState.IsValid)
             {
+
+                review.Rating = review.GetRatingNumb();
+
                 db.Entry(review).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -16,14 +16,40 @@ namespace Sharpshooter.Models
         public int MenuItemID { get; set; }
         public string UserName { get; set; }
         public string ReviewOfItem{ get; set; }
-        [Range(0, 5, ErrorMessage = "Rating can be from 0 - 5")]
         public int Rating { get; set; }
         public virtual MenuItem MenuItem { get; set; }
+        public string StarRating { get; set; }
 
 
+        public int GetRatingNumb()
+        {
+            if (StarRating == "OneStar")
+            {
+                Rating = 1;
+            }
+            else if (StarRating == "TwoStar")
+            {
+                Rating = 2;
+            }
+            else if (StarRating == "ThreeStar")
+            {
+                Rating = 3;
+            }
+            else if (StarRating == "FourStar")
+            {
+                Rating = 4;
+            }
+            else if (StarRating == "FiveStar")
+            {
+                Rating = 5;
+            }
+            else
+            {
+                Rating = 0;
+            }
 
-    
-     
+            return Rating;
+        }
     }
 
    
