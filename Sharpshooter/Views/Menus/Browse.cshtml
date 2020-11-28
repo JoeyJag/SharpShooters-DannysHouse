@@ -19,7 +19,7 @@
     <ul style="margin:auto">
         @foreach (var item in Model.MenuItems)
         {
-        <div>
+        <div class="blog-box">
             <li>
                 <h3>@item.MenuItemTitle</h3>
                 <a href="@Url.Action("ViewItems", new { id = item.MenuItemID})">

@@ -34,7 +34,51 @@
                 @Html.DisplayFor(modelItem => item.ReviewOfItem)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Rating)
+                @if (item.Rating == 1)
+                {
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                }
+                else if (item.Rating == 2)
+                {
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                }
+                else if (item.Rating == 3)
+                {
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                }
+                else if (item.Rating == 4)
+                {
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                }
+                else if (item.Rating == 5)
+                {
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                }
+                else
+                {
+                    <p>0</p>
+                }
+
             </td>
         </tr>
 
